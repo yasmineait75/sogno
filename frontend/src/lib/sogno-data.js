@@ -32,7 +32,7 @@ export const SOGNO_MEDIA = {
 };
 
 export const SOGNO_ANTIPASTI = [
-  { name: "Burrata di Puglia", desc: "Burrata des Pouilles, citrons d'Amalfi confits, basilic frais, huile de Ligurie", price: "19" },
+  { name: "Burrata di Puglia", desc: "Burrata des Pouilles, crème et dés de potiron fondants, châtaignes, chou kale sauté — équilibre parfait entre onctuosité et saveurs de saison", price: "19" },
   { name: "Vitello tonnato", desc: "Fines tranches de noix de veau, crème de thon et de câpres — douce, équilibrée et pleine de caractère", price: "18" },
   { name: "Frittura di calamari e zucchine", desc: "Beignets de calamars et de courgettes frits, sauce tartare au citron", price: "18" },
   { name: "Uovo alla Valtellina", desc: "Œuf parfait au cœur coulant, crème onctueuse de pecorino, speck de Valtellina, noisettes torréfiées", price: "16" },
