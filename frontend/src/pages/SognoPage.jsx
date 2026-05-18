@@ -13,7 +13,7 @@ const SognoPage = () => {
   useEffect(() => {
     document.title = "Sogno — Ristorante Italiano  •  Paris 16e";
     const prevBg = document.body.style.backgroundColor;
-    document.body.style.backgroundColor = "#0a0908";
+    document.body.style.backgroundColor = "#F9F6F0";
 
     const lenis = new Lenis({
       duration: 1.4,
@@ -32,7 +32,7 @@ const SognoPage = () => {
   }, []);
 
   return (
-    <div className="bg-[#0a0908] min-h-screen" data-testid="sogno-page">
+    <div className="bg-[#F9F6F0] min-h-screen" data-testid="sogno-page">
       <SognoNavbar />
       <main>
         <SognoHero />
@@ -46,9 +46,9 @@ const SognoPage = () => {
         position="bottom-right"
         toastOptions={{
           style: {
-            background: "#141211",
-            color: "#fdfbf7",
-            border: "1px solid rgba(197,160,89,0.30)",
+            background: "#FFFFFF",
+            color: "#2C3E38",
+            border: "1px solid #E5DFD3",
             borderRadius: 0,
             fontFamily: "Manrope, sans-serif",
             fontSize: "13px",

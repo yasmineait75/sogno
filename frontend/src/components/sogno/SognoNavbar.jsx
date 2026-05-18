@@ -24,7 +24,7 @@ export const SognoNavbar = () => {
       data-testid="sogno-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "backdrop-blur-xl bg-[#0a0908]/80 border-b border-[#c5a059]/15"
+          ? "backdrop-blur-xl bg-[#F9F6F0]/85 border-b border-[#E5DFD3]"
           : "bg-transparent"
       }`}
     >
@@ -32,10 +32,10 @@ export const SognoNavbar = () => {
         <a
           href="#top"
           data-testid="sogno-logo"
-          className="font-serif-display text-3xl tracking-[0.18em] text-[#fdfbf7] uppercase"
-          style={{ fontFamily: "'Bodoni Moda', serif", fontWeight: 500 }}
+          className={`tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-[#2C3E38]" : "text-white"}`}
+          style={{ fontFamily: "'Bodoni Moda', serif", fontWeight: 500, fontSize: "1.75rem", letterSpacing: "0.18em" }}
         >
-          So<span className="text-[#c5a059]">g</span>no
+          So<span className="text-[#E8B931]">g</span>no
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -44,7 +44,9 @@ export const SognoNavbar = () => {
               key={l.href}
               href={l.href}
               data-testid={`sogno-nav-${l.href.replace("#", "")}`}
-              className="text-[11px] uppercase tracking-[0.22em] font-medium text-[#fdfbf7]/85 hover:text-[#c5a059] transition-colors"
+              className={`text-[11px] uppercase tracking-[0.22em] font-medium transition-colors hover:text-[#1F4E5F] ${
+                scrolled ? "text-[#2C3E38]" : "text-white"
+              }`}
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               {l.label}
@@ -53,7 +55,11 @@ export const SognoNavbar = () => {
           <a
             href="#prenotare"
             data-testid="sogno-nav-reserve"
-            className="text-[11px] uppercase tracking-[0.22em] font-semibold px-7 py-3 bg-[#c5a059] text-[#0a0908] hover:bg-[#dfb768] transition-colors"
+            className={`text-[11px] uppercase tracking-[0.22em] font-semibold px-7 py-3 transition-colors ${
+              scrolled
+                ? "bg-[#1F4E5F] text-white hover:bg-[#173B49]"
+                : "bg-white text-[#2C3E38] hover:bg-[#1F4E5F] hover:text-white"
+            }`}
             style={{ fontFamily: "'Manrope', sans-serif" }}
           >
             Prenotare
@@ -61,7 +67,11 @@ export const SognoNavbar = () => {
           <Link
             to="/"
             data-testid="sogno-nav-other-site"
-            className="text-[11px] uppercase tracking-[0.22em] text-[#fdfbf7]/55 hover:text-[#c5a059] transition-colors border-l border-[#c5a059]/25 pl-6"
+            className={`text-[11px] uppercase tracking-[0.22em] transition-colors border-l pl-6 ${
+              scrolled
+                ? "text-[#5C6B66] hover:text-[#1F4E5F] border-[#E5DFD3]"
+                : "text-white/70 hover:text-white border-white/40"
+            }`}
             style={{ fontFamily: "'Manrope', sans-serif" }}
             title="Visiter Le Jean Michel Breizh"
           >
@@ -72,7 +82,7 @@ export const SognoNavbar = () => {
         <button
           data-testid="sogno-nav-toggle"
           onClick={() => setOpen((o) => !o)}
-          className="md:hidden text-[#fdfbf7]"
+          className={scrolled ? "md:hidden text-[#2C3E38]" : "md:hidden text-white"}
           aria-label="Menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -80,14 +90,14 @@ export const SognoNavbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden bg-[#0a0908] border-t border-[#c5a059]/20">
+        <div className="md:hidden bg-[#F9F6F0] border-t border-[#E5DFD3]">
           <div className="px-6 py-6 flex flex-col gap-5">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-[11px] uppercase tracking-[0.22em] text-[#fdfbf7]/85 hover:text-[#c5a059]"
+                className="text-[11px] uppercase tracking-[0.22em] text-[#2C3E38] hover:text-[#1F4E5F]"
                 style={{ fontFamily: "'Manrope', sans-serif" }}
               >
                 {l.label}
@@ -97,7 +107,7 @@ export const SognoNavbar = () => {
               href="#prenotare"
               onClick={() => setOpen(false)}
               data-testid="sogno-mobile-reserve"
-              className="text-[11px] uppercase tracking-[0.22em] bg-[#c5a059] text-[#0a0908] px-6 py-3 text-center mt-2"
+              className="text-[11px] uppercase tracking-[0.22em] bg-[#1F4E5F] text-white px-6 py-3 text-center mt-2"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               Prenotare

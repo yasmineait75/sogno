@@ -22,25 +22,26 @@ export const SOGNO_HOURS = [
 ];
 
 export const SOGNO_MEDIA = {
-  hero: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/d969179f2bdfb1bd3d1353dfaa2e175c00f3539e77a85218d8685660ce3cea71.png",
-  wine: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/cce972e8921a1f809daa3ce57d48b796c34624bff65509ea6455c82d51edfa6f.png",
-  vongole: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/910de659658176caf5bf494fa88ae160823196768e397dff88fa20aee84a06f6.png",
-  burrata: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/388eeb59e78547f5d10d82ecb858dc912da90d6a40e47cb03458068b3ccb6173.png",
-  tiramisu: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/5d020419eab8cd2bf94f8157b9964ce7f9aaabed27da2f4629a4b3f6b75b5ace.png",
+  hero: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/4c0414d0b4a5be4a9faeabb483e3724ff1a29523455ca7c17316c334bc836dc0.png",
+  lemons: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/62b296b3937c99c07d03c8f8d5ae556ddadd1217ac3e55c68322fa73621d0cf5.png",
+  wine: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/bc554cc7e0b3d75853b8e8f3dc13772e4acee8cf90638a593ba5f967dff13b8a.png",
+  vongole: "https://images.unsplash.com/photo-1682159173068-358e0411abc7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwaXRhbGlhbiUyMHBhc3RhJTIwc2VhZm9vZCUyMGJyaWdodHxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
+  burrata: "https://images.unsplash.com/photo-1614887101277-22d7168ab9c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJ1cnJhdGElMjBjaGVlc2UlMjBicmlnaHQlMjBwbGF0ZXxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
+  tiramisu: "https://images.unsplash.com/photo-1698688334089-c68105801d02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0aXJhbWlzdSUyMGRlc3NlcnQlMjBlbGVnYW50JTIwYnJpZ2h0fGVufDB8fHx8MTc3OTEyNTEzN3ww&ixlib=rb-4.1.0&q=85",
 };
 
 export const SOGNO_ANTIPASTI = [
-  { name: "Burrata di Puglia", desc: "Burrata des Pouilles, crème de potiron, dés de potiron, châtaignes, chou kale sauté", price: "13" },
-  { name: "Vitello tonnato", desc: "Tranches de noix de veau, crème de thon et de câpres", price: "18" },
-  { name: "Frittura di calamari e zucchine", desc: "Beignets de calamars et de courgettes frits, sauce tartare", price: "18" },
+  { name: "Burrata di Puglia", desc: "Burrata des Pouilles, citrons d'Amalfi confits, basilic frais, huile de Ligurie", price: "19" },
+  { name: "Vitello tonnato", desc: "Tranches de noix de veau, crème de thon et de câpres, fleur de sel", price: "18" },
+  { name: "Frittura di calamari e zucchine", desc: "Beignets de calamars et de courgettes frits, sauce tartare au citron", price: "18" },
   { name: "Uovo cotto a bassa temperatura", desc: "Œuf parfait, champignons de saison sautés à la ciboulette, mousse de scamorza fumée", price: "14" },
-  { name: "Prosciutto di Parma", desc: "Jambon de Parme affiné 24 mois", price: "14" },
+  { name: "Prosciutto di Parma", desc: "Jambon de Parme affiné 24 mois, focaccia tiède", price: "16" },
 ];
 
 export const SOGNO_PRIMI = [
-  { name: "Orecchiette alla crema di Taleggio", desc: "Orecchiette, crème de Taleggio, noix au romarin et chou kale croustillant", price: "19" },
-  { name: "Mafalde ricce ai funghi", desc: "Mafalde ricce à la sauce aux champignons, ciboulette, crème de caciocavallo", price: "21" },
-  { name: "Linguine alle vongole", desc: "Linguine aux palourdes, ail confit, persil et piment doux", price: "28" },
+  { name: "Orecchiette alla crema di Taleggio", desc: "Orecchiette, crème de Taleggio, noix au romarin et chou kale croustillant", price: "21" },
+  { name: "Mafalde ricce ai funghi", desc: "Mafalde ricce à la sauce aux champignons, ciboulette, crème de caciocavallo", price: "22" },
+  { name: "Linguine alle vongole", desc: "Linguine aux palourdes, ail confit, persil et piment doux", price: "24" },
   { name: "Lasagna al ragù di manzo", desc: "Lasagne au ragoût de bœuf, mijotée pendant 6 heures", price: "23" },
   { name: "Sedanini al pomodoro con melanzane", desc: "Sedanini, sauce tomate, aubergines, câpres et thon frais mijoté dans la sauce", price: "22" },
 ];

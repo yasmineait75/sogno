@@ -7,21 +7,21 @@ export const SognoGalleria = () => {
     { src: SOGNO_MEDIA.vongole, alt: "Linguine alle vongole", cls: "col-span-12 md:col-span-7 row-span-2 h-[460px]", caption: "Linguine alle Vongole" },
     { src: SOGNO_MEDIA.burrata, alt: "Burrata", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Burrata di Puglia" },
     { src: SOGNO_MEDIA.tiramisu, alt: "Tiramisu", cls: "col-span-6 md:col-span-5 h-[220px]", caption: "Tiramisù tradizionale" },
-    { src: SOGNO_MEDIA.wine, alt: "Vin rouge", cls: "col-span-6 md:col-span-4 h-[320px]", caption: "La Cantina" },
-    { src: SOGNO_MEDIA.hero, alt: "Salle Sogno", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Sala Principale" },
+    { src: SOGNO_MEDIA.wine, alt: "Vermentino", cls: "col-span-6 md:col-span-4 h-[320px]", caption: "La Cantina" },
+    { src: SOGNO_MEDIA.hero, alt: "Terrasse Portofino", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Sala Riviera" },
   ];
 
   return (
     <section
       id="galleria"
       data-testid="sogno-galleria"
-      className="bg-[#0a0908] text-[#fdfbf7] py-32 md:py-40"
+      className="bg-[#F9F6F0] text-[#2C3E38] py-32 md:py-40"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <p
-              className="text-[11px] uppercase tracking-[0.32em] text-[#c5a059] mb-6"
+              className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-6"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               — La Galleria
@@ -34,15 +34,15 @@ export const SognoGalleria = () => {
                 fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
               }}
             >
-              <em className="italic">Bellezza</em> nei dettagli.
+              <em className="italic">Bellezza</em> al sole.
             </h2>
           </div>
           <p
-            className="text-[#fdfbf7]/55 max-w-sm md:text-right"
+            className="text-[#5C6B66] max-w-sm md:text-right"
             style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
           >
-            Tournée comme une scène de Sorrentino — chaque assiette, chaque
-            étiquette, chaque éclat de cristal.
+            Tournée comme une carte postale de la Riviera — citrons d'Amalfi,
+            nappes blanches, mer Ligure et un éclat de soleil dans chaque verre.
           </p>
         </div>
 
@@ -62,10 +62,10 @@ export const SognoGalleria = () => {
                 alt={it.alt}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0908]/85 via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-90" />
               <p
-                className="absolute bottom-5 left-5 text-[#fdfbf7] italic"
-                style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.3rem" }}
+                className="absolute bottom-5 left-5 text-white italic"
+                style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.3rem", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
               >
                 {it.caption}
               </p>
