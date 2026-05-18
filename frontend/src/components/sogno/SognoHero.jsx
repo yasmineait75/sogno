@@ -10,12 +10,17 @@ export const SognoHero = () => {
       className="relative min-h-screen w-full flex items-end overflow-hidden bg-[#0E1A14]"
     >
       <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: `url(${SOGNO_MEDIA.hero})` }}
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${SOGNO_MEDIA.hero})`,
+          backgroundSize: "140%",
+          backgroundPosition: "62% 78%",
+          backgroundRepeat: "no-repeat",
+        }}
       />
       {/* Cinematic gradient — keep food visible top-right, text legible bottom-left */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/45 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/35 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-32">
         <motion.p
@@ -41,14 +46,14 @@ export const SognoHero = () => {
           }}
           data-testid="sogno-hero-title"
         >
-          <span style={{ fontSize: "clamp(4.5rem, 14vw, 13rem)" }}>SOGNO</span>
+          <span style={{ fontSize: "clamp(5.5rem, 17vw, 16rem)" }}>SOGNO</span>
           <span
             className="italic"
             style={{
-              fontSize: "clamp(1.5rem, 3.5vw, 3rem)",
+              fontSize: "clamp(2rem, 4.5vw, 4rem)",
               color: "#E8B931",
               letterSpacing: "0.04em",
-              textShadow: "0 2px 14px rgba(0,0,0,0.55)",
+              textShadow: "0 2px 14px rgba(0,0,0,0.6)",
             }}
           >
             Paris.
