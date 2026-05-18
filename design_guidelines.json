@@ -1,108 +1,84 @@
 {
-  "project_name": "Sogno - Luxury Italian Restaurant",
-  "theme": "dark",
-  "archetype": "5 (Jewel & Luxury)",
+  "theme_and_archetype": {
+    "theme": "LIGHT",
+    "archetype": "Archetype 1: Organic & Earthy (Modified for Mediterranean Portofino Elegance)",
+    "mood": "Sunny, Condé Nast Traveler editorial, luxurious 1960s Dolce Vita, luminous, fresh, airy"
+  },
   "colors": {
-    "background": "#0a0908",
-    "surface": "#141211",
-    "surface_glass": "rgba(10, 9, 8, 0.7)",
-    "primary_text": "#fdfbf7",
-    "secondary_text": "#a8a29e",
-    "accent_gold": "#c5a059",
-    "accent_hover": "#dfb768",
-    "border": "#272321",
-    "error": "#8c3a3a"
+    "background_primary": "#F9F6F0",
+    "background_secondary": "#FFFFFF",
+    "surface": "#FDFBF7",
+    "accent_terracotta": "#C8553D",
+    "accent_sea_blue": "#5B7B8C",
+    "accent_lemon": "#F2E299",
+    "text_primary": "#2C3E38",
+    "text_secondary": "#5C6B66",
+    "border_subtle": "#E5DFD3"
   },
   "typography": {
-    "headings": {
-      "font_family": "Bodoni Moda, serif",
-      "weights": ["400", "500", "600"],
-      "styles": "tracking-tight, cinematic, elegant"
-    },
-    "body": {
-      "font_family": "Manrope, sans-serif",
-      "weights": ["300", "400"],
-      "styles": "clean, modern, highly legible, leading-relaxed"
-    },
-    "accents": {
-      "font_family": "Manrope, sans-serif",
-      "styles": "uppercase, tracking-widest, text-xs"
-    }
+    "heading_font": "Bodoni Moda",
+    "body_font": "Manrope",
+    "heading_style": "Elegant, editorial, high-contrast serif. Tight tracking on large text.",
+    "subheading_style": "Uppercase, tracking-[0.2em], text-sm, text-[#5B7B8C] or text-[#C8553D].",
+    "hierarchy_rules": "H1 max text-5xl md:text-7xl. Use fluid scaling."
   },
   "layout_and_spacing": {
-    "container": "max-w-7xl mx-auto px-6 md:px-12",
-    "section_padding": "py-24 md:py-32",
-    "grid_strategy": "Mode A (Tetris/Asymmetric). Avoid symmetric columns. Use overlapping images and text blocks, plenty of negative space.",
-    "border_radius": "rounded-none for sharp luxury feel, or max rounded-sm for subtle inputs"
+    "corner_radius": "rounded-none",
+    "spacing_scale": "Generous (p-12 to p-24) to emulate high-end editorial print margins.",
+    "grids": "Asymmetrical bento for galleries and menus. 1px visible grid borders (border-[#E5DFD3]) between sections to give structure."
   },
-  "motion_and_interaction": {
-    "scrolling": "Lenis smooth scrolling (mandatory)",
-    "animations": "Framer Motion. Slow fade-ins, gentle upward transforms (y: 20 -> 0) with duration > 0.8s and easeOut. NO bouncy springs.",
-    "hover_states": "Subtle text color shifts to gold, image scale up (1.05) in overflow-hidden containers."
+  "component_rules": {
+    "buttons": "rounded-none, bg-[#C8553D] text-[#FFFFFF] hover:bg-[#A6442F]. Secondary buttons: border border-[#2C3E38] text-[#2C3E38] hover:bg-[#2C3E38] hover:text-[#F9F6F0]",
+    "navbar": "Glassmorphism: backdrop-blur-xl bg-[#F9F6F0]/80, border-b border-[#E5DFD3], text-[#2C3E38]",
+    "cards_and_menus": "Flat backgrounds (bg-[#FFFFFF]), no shadows, 1px border-[#E5DFD3]",
+    "footer": "bg-[#F9F6F0], XXL Logotype in Bodoni Moda (text-[#C8553D] or text-[#2C3E38]), clean structured columns with 1px top border."
   },
-  "ui_components": {
-    "buttons": "Square corners (rounded-none). Primary: bg-[#c5a059] text-black hover:bg-[#dfb768]. Secondary: bg-transparent border border-[#c5a059] text-[#c5a059] hover:bg-[#c5a059]/10.",
-    "navigation": "Fixed header with crystal glassmorphism (backdrop-blur-xl bg-[#0a0908]/70). Logo centered or left. Explicit navigation links, NO hamburger menu on desktop.",
-    "forms": "Use Shadcn Form, Input, Select, Popover, Calendar. Override Vercel look with dark backgrounds (bg-[#141211]), thin border (#272321), square corners, and gold focus rings.",
-    "menu_list": "Elegant editorial layout. Dotted lines connecting dish name to price, or space-between flexbox. Ingredients in smaller, secondary text."
+  "motion_and_interactions": {
+    "scrolling": "Lenis smooth scroll mandatory for premium feel.",
+    "animations": "Framer motion for gentle text reveals (y-axis slide up), parallax on hero and large images.",
+    "hover_states": "Images scale slightly inside overflow-hidden containers. Text colors shift subtly."
   },
   "media": {
+    "overlay_rules": "Max bg-black/20 on Hero. Do NOT darken images excessively. Keep the sunlit Portofino feel intact. Use gradient-to-t from-black/30 to-transparent only at the bottom if text readability is an issue.",
     "image_urls": {
-      "hero_background": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/d969179f2bdfb1bd3d1353dfaa2e175c00f3539e77a85218d8685660ce3cea71.png",
-        "description": "Main hero background. Use bg-black/40 overlay to ensure text contrast."
+      "hero_terrace": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/4c0414d0b4a5be4a9faeabb483e3724ff1a29523455ca7c17316c334bc836dc0.png",
+        "description": "Portofino terrace at golden hour, blue/white striped umbrellas",
+        "category": "Hero Section Background"
       },
-      "texture_wine": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/cce972e8921a1f809daa3ce57d48b796c34624bff65509ea6455c82d51edfa6f.png",
-        "description": "Dark red wine pouring. For Cave/Drinks or About section."
+      "about_lemons": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/62b296b3937c99c07d03c8f8d5ae556ddadd1217ac3e55c68322fa73621d0cf5.png",
+        "description": "Close-up of lemon trees on terracotta wall",
+        "category": "La Storia / About Section Image"
       },
-      "dish_vongole": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/910de659658176caf5bf494fa88ae160823196768e397dff88fa20aee84a06f6.png",
-        "description": "Linguine alle vongole. Menu highlight or gallery."
+      "wine_sea": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/bc554cc7e0b3d75853b8e8f3dc13772e4acee8cf90638a593ba5f967dff13b8a.png",
+        "description": "White wine with blurred Portofino turquoise sea background",
+        "category": "La Cantina / Wine Menu Image"
       },
-      "dish_burrata": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/388eeb59e78547f5d10d82ecb858dc912da90d6a40e47cb03458068b3ccb6173.png",
-        "description": "Burrata di Puglia. Menu highlight or gallery."
+      "menu_pasta": {
+        "url": "https://images.unsplash.com/photo-1682159173068-358e0411abc7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwaXRhbGlhbiUyMHBhc3RhJTIwc2VhZm9vZCUyMGJyaWdodHxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Elegant Italian seafood pasta plate",
+        "category": "Il Menu / Primi or Galleria"
       },
-      "dish_tiramisu": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/5d020419eab8cd2bf94f8157b9964ce7f9aaabed27da2f4629a4b3f6b75b5ace.png",
-        "description": "Tiramisu tradizionale. Menu highlight or gallery."
+      "menu_burrata": {
+        "url": "https://images.unsplash.com/photo-1614887101277-22d7168ab9c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJ1cnJhdGElMjBjaGVlc2UlMjBicmlnaHQlMjBwbGF0ZXxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Fresh burrata on a bright elegant plate",
+        "category": "Il Menu / Antipasti or Galleria"
+      },
+      "menu_tiramisu": {
+        "url": "https://images.unsplash.com/photo-1698688334089-c68105801d02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0aXJhbWlzdSUyMGRlc3NlcnQlMjBlbGVnYW50JTIwYnJpZ2h0fGVufDB8fHx8MTc3OTEyNTEzN3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Elegant Tiramisu dessert",
+        "category": "Il Menu / Dolci or Galleria"
       }
     }
   },
-  "content_strategy": {
-    "tone": "Refined, intimate, Dolce Vita, highly sensory.",
-    "sections": [
-      {
-        "name": "Hero",
-        "description": "Immersive image, massive typography (SOGNO), elegant reservation CTA."
-      },
-      {
-        "name": "La Storia",
-        "description": "About section explaining the Italian heritage and Trocadéro location. Asymmetric imagery."
-      },
-      {
-        "name": "Menu",
-        "description": "Divided into Antipasti, Piatti Principali, Dolci. Real data: Burrata (13€), Vitello Tonnato (18€), Linguine Vongole (28€), Ossobuco (29€)."
-      },
-      {
-        "name": "Reservation",
-        "description": "Premium booking form (Date, Time, Guests, Details). Highly styled Shadcn components."
-      },
-      {
-        "name": "Footer",
-        "description": "Massive SOGNO text, 42 Rue de l'Amiral Hamelin, 75016 Paris. Contact info."
-      }
-    ]
-  },
-  "testing": "All interactive elements (buttons, links, form inputs) MUST include data-testid attributes.",
   "instructions_to_main_agent": [
-    "Install and configure Bodoni Moda and Manrope via Google Fonts in CSS/Tailwind config.",
-    "Use raw HTML and Tailwind (div, section) for complex overlapping marketing layouts; only use Shadcn for the reservation form components.",
-    "Implement Lenis for smooth scroll. Use Framer Motion for text reveals (staggered letters/lines) and fade-ins.",
-    "Never use pure white text, always #fdfbf7. Never use full black, always #0a0908.",
-    "Follow 'E1' spacing: generous p-12 to p-24.",
-    "In the menu, ensure prices and descriptions match the real scraped data.",
-    "Do NOT hide desktop navigation behind a hamburger menu."
+    "REPLACE ALL DARK THEME UTILITIES with the new light Portofino palette specified in this JSON.",
+    "Do NOT use pure black backgrounds or overly heavy hero overlays. Max bg-black/20 to maintain the sun-drenched feel.",
+    "Ensure headings use Bodoni Moda. Import it if necessary via standard Google Fonts links.",
+    "Ensure 'rounded-none' is strictly applied to buttons, cards, and image wrappers. Keep it sharp and editorial.",
+    "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='hero-cta-button', data-testid='reservation-submit').",
+    "Retain the existing section routes (/sogno) and all key functionalities (Hero, La Storia, Il Menu, Galleria, Prenotazione/Contatto, Footer logotype XXL)."
   ]
 }
