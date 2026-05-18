@@ -36,6 +36,7 @@ export const SOGNO_ANTIPASTI = [
   { name: "Vitello tonnato", desc: "Fines tranches de noix de veau, crème de thon et de câpres — douce, équilibrée et pleine de caractère", price: "18" },
   { name: "Frittura di calamari e zucchine", desc: "Beignets de calamars et courgettes dorés à la perfection, légers et croustillants, filet de citron et sauce tartare maison — un parfum de Méditerranée", price: "18" },
   { name: "Uovo alla Valtellina", desc: "Œuf parfait au cœur coulant, crème onctueuse de pecorino, speck de Valtellina, noisettes torréfiées", price: "16" },
+  { name: "Uovo cotto a bassa temperatura", desc: "Œuf parfait au cœur coulant, champignons de saison sautés à la ciboulette, mousse de scamorza fumée — un jeu subtil de textures et saveurs", price: "15" },
   { name: "Prosciutto di Parma", desc: "Jambon de Parme affiné 24 mois, focaccia tiède", price: "16" },
 ];
 
