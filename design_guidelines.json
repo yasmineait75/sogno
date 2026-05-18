@@ -5,6 +5,33 @@
       "description": "Photorealistic aerial view of a luxury restaurant terrace in Portofino, Italy, golden hour light, colorful pastel houses cascading down the cliffside, turquoise Mediterranean sea below, a beautifully set table with Italian dishes \u2014 pasta, seafood, wine glasses \u2014 white linen tablecloth, flowers, elegant candlelight, cinematic photography, luxury lifestyle, bokeh, shot from above at a slight angle, Vogue editorial style",
       "category": "hero",
       "format": "landscape"
+    },
+    "gallery_sogno_v2": {
+      "burrata": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/3c8ec45203b355e697e320288f50aa34e7164d2625d6b84a3790114438b66b84.png",
+        "description": "Photorealistic food photography, dark editorial aesthetic. Fresh Burrata on vibrant orange pumpkin cream, diced pumpkin, chestnuts, kale. Served in a matte black ceramic bowl. Dark wood surface, warm dim lighting, upscale Parisian restaurant vibe. High contrast, 3/4 angle, wide landscape composition.",
+        "category": "gallery"
+      },
+      "vongole": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/0a5406d86727189dce7bda82d9c4bf8d57b30a3105d2a3911dfde884c4b1945c.png",
+        "description": "Photorealistic food photography, dark editorial aesthetic. Linguine alle vongole, open clams, parsley, rich briny sauce, served in a deep matte black plate. Dark marble surface, warm dim lighting, upscale Parisian restaurant vibe. Top-down view, wide landscape composition.",
+        "category": "gallery"
+      },
+      "tiramisu": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/6894dc24d33f9dbd596972d0823d8b691640c499de5c33bfdc8ddd44020252d6.png",
+        "description": "Photorealistic food photography, dark editorial aesthetic. Tiramisu close-up side view, visible layers, thick cocoa powder veil, fresh mint leaf, on a matte black plate. Dark wood surface, warm dim lighting, upscale Parisian restaurant vibe. Wide landscape composition.",
+        "category": "gallery"
+      },
+      "vitello": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/6511cff38f19ec70150311a69614c409fd1bcc8d95780766e03cf982fadb8d14.png",
+        "description": "Photorealistic food photography, dark editorial aesthetic. Vitello tonnato, thin pink veal slices, creamy tuna sauce in elegant lines, capers, arugula, elongated matte black dish. Dark marble surface, warm dim lighting, upscale Parisian restaurant vibe. Wide landscape composition.",
+        "category": "gallery"
+      },
+      "suprema": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/613ace6533ed1b9be7ed284c2aedf6a27f547b5c532fac0d421a93f379205d0b.png",
+        "description": "Photorealistic food photography, dark editorial aesthetic. Chicken breast stuffed with black truffle, roasted cauliflower, creamy sauce, hazelnuts, on a matte black plate. Dark wood surface, warm dim lighting, upscale Parisian restaurant vibe. Wide landscape composition.",
+        "category": "gallery"
+      }
     }
   }
 }
