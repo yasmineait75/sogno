@@ -92,9 +92,9 @@ export const SognoHero = () => {
             textShadow: "0 1px 12px rgba(0,0,0,0.6)",
           }}
         >
-          Une cuisine italienne d'auteur signée par notre chef Dario. Pâtes fraîches du
-          matin, burratas des Pouilles, vermentinos de Sardaigne — servis à
-          deux pas du Trocadéro.
+          Une cuisine italienne d'auteur signée par notre chef Dario et imaginée par
+          Thomas, originaire des Pouilles. Pâtes fraîches du matin, burratas
+          des Pouilles, vermentinos de Sardaigne — à deux pas du Trocadéro.
         </motion.p>
 
         <motion.div

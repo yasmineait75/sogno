@@ -38,8 +38,8 @@ export const SognoStoria = () => {
               fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
             }}
           >
-            L'<em className="italic text-[#1F4E5F]">Italie</em>, sur une
-            <br /> table de <em className="italic" style={{ color: "#5B7B8C" }}>marbre</em>.
+            Un <em className="italic text-[#1F4E5F]">rêve</em> d'enfant,
+            <br /> une <em className="italic" style={{ color: "#5B7B8C" }}>histoire</em> de famille.
           </h2>
 
           <div
@@ -47,28 +47,35 @@ export const SognoStoria = () => {
             style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
           >
             <p>
-              Sogno est né d'une certitude : la grande cuisine italienne mérite
-              sa table parisienne. Une table dressée chaque soir avec du
-              <em> linge blanc</em>, des verres en cristal et des assiettes
-              chargées de saveurs précises.
+              Avant d'être un restaurant, Sogno était un rêve d'enfant. Celui
+              de <strong className="text-[#2C3E38]">Thomas</strong>, originaire
+              des Pouilles, bercé par les bras de sa <em>nonna</em> italienne
+              et par les dimanches en famille autour de grandes tablées généreuses.
             </p>
             <p>
-              Entre <em>précision, passion et savoir-faire</em>, notre chef
-              <strong className="text-[#2C3E38]"> Dario</strong> donne vie à
-              chaque assiette — comme pour son entrée signature, l'<em>Uovo alla
-              Valtellina</em> : un œuf parfait au cœur coulant, délicatement
-              déposé sur une crème onctueuse de pecorino, accompagné de speck de
-              Valtellina et de noisettes torréfiées.
+              Chez sa grand-mère, la cuisine était un langage d'amour. Des
+              recettes transmises avec le cœur, des saveurs authentiques et
+              cette chaleur unique qui réunit les générations.
             </p>
             <p>
-              Burrate des Pouilles, jambon de Parme affiné 24 mois, citrons d'Amalfi,
-              huiles d'olive de Ligurie : chaque produit est sélectionné à la
-              main, chaque service repensé au rythme des saisons italiennes.
+              Aujourd'hui, ce rêve prend vie aux côtés de notre
+              chef <strong className="text-[#2C3E38]">Dario</strong>, qui
+              donne à chaque assiette précision, passion et savoir-faire — comme
+              pour son entrée signature, l'<em>Uovo alla Valtellina</em> :
+              œuf parfait au cœur coulant, crème onctueuse de pecorino, speck
+              de Valtellina et noisettes torréfiées.
             </p>
-            <p className="text-[#1F4E5F] italic">« La cucina è amore servito a tavola. »</p>
+            <p className="text-[#1F4E5F] italic">
+              « Chaque repas est un voyage, et chaque assiette un souvenir. »
+            </p>
           </div>
 
-          <div className="mt-14 grid grid-cols-3 gap-6 max-w-md">
+          <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-5">
+            <PersonTag role="Fondateur" name="Thomas" />
+            <PersonTag role="Chef" name="Dario" />
+          </div>
+
+          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
             <Stat value="2019" label="Apertura" />
             <Stat value="36" label="Coperti" />
             <Stat value="120+" label="Etichette di vino" />
@@ -101,13 +108,13 @@ export const SognoStoria = () => {
               className="text-[10px] uppercase tracking-[0.32em] text-[#1F4E5F]"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              Chef
+              Fondateur & Chef
             </p>
             <p
               className="mt-1 italic text-[#2C3E38]"
               style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.4rem" }}
             >
-              Dario
+              Thomas &amp; Dario
             </p>
           </div>
         </motion.div>
@@ -130,6 +137,26 @@ const Stat = ({ value, label }) => (
     >
       {label}
     </p>
+  </div>
+);
+
+const PersonTag = ({ role, name }) => (
+  <div
+    data-testid={`sogno-person-${name.toLowerCase()}`}
+    className="flex items-baseline gap-3"
+  >
+    <span
+      className="text-[10px] uppercase tracking-[0.32em] text-[#1F4E5F]"
+      style={{ fontFamily: "'Manrope', sans-serif" }}
+    >
+      {role} —
+    </span>
+    <span
+      className="italic text-[#2C3E38]"
+      style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.5rem", fontWeight: 500 }}
+    >
+      {name}
+    </span>
   </div>
 );
 
