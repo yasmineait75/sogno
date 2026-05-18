@@ -53,16 +53,17 @@ export const SognoStoria = () => {
               chargées de saveurs précises.
             </p>
             <p>
-              Lorenzo Russo, notre chef, a appris la pâte fraîche dans la cuisine
-              de sa <em>nonna</em> avant de passer par les fourneaux de Massimo
-              Bottura. Il sélectionne lui-même chaque producteur : burrate des
-              Pouilles, jambon de Parme affiné 24 mois, citrons d'Amalfi et
-              huiles d'olive de Ligurie.
+              Entre <em>précision, passion et savoir-faire</em>, notre chef
+              <strong className="text-[#2C3E38]"> Dario</strong> donne vie à
+              chaque assiette — comme pour son entrée signature, l'<em>Uovo alla
+              Valtellina</em> : un œuf parfait au cœur coulant, délicatement
+              déposé sur une crème onctueuse de pecorino, accompagné de speck de
+              Valtellina et de noisettes torréfiées.
             </p>
             <p>
-              Dans la salle de 36 couverts, sobre et lumineuse, on prend son
-              temps. C'est l'Italie comme on l'aime — celle de la table
-              partagée, du vin généreux, du sourire de la mamma.
+              Burrate des Pouilles, jambon de Parme affiné 24 mois, citrons d'Amalfi,
+              huiles d'olive de Ligurie : chaque produit est sélectionné à la
+              main, chaque service repensé au rythme des saisons italiennes.
             </p>
             <p className="text-[#1F4E5F] italic">« La cucina è amore servito a tavola. »</p>
           </div>
@@ -106,7 +107,7 @@ export const SognoStoria = () => {
               className="mt-1 italic text-[#2C3E38]"
               style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.4rem" }}
             >
-              Lorenzo Russo
+              Dario
             </p>
           </div>
         </motion.div>

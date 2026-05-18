@@ -35,7 +35,7 @@ export const SOGNO_ANTIPASTI = [
   { name: "Burrata di Puglia", desc: "Burrata des Pouilles, citrons d'Amalfi confits, basilic frais, huile de Ligurie", price: "19" },
   { name: "Vitello tonnato", desc: "Tranches de noix de veau, crème de thon et de câpres, fleur de sel", price: "18" },
   { name: "Frittura di calamari e zucchine", desc: "Beignets de calamars et de courgettes frits, sauce tartare au citron", price: "18" },
-  { name: "Uovo cotto a bassa temperatura", desc: "Œuf parfait, champignons de saison sautés à la ciboulette, mousse de scamorza fumée", price: "14" },
+  { name: "Uovo alla Valtellina", desc: "Œuf parfait au cœur coulant, crème onctueuse de pecorino, speck de Valtellina, noisettes torréfiées", price: "16" },
   { name: "Prosciutto di Parma", desc: "Jambon de Parme affiné 24 mois, focaccia tiède", price: "16" },
 ];
 
