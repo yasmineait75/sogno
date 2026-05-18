@@ -26,7 +26,7 @@ const MenuItem = ({ item, i }) => (
     data-testid={`sogno-dish-${item.name.toLowerCase().replace(/[^a-z0-9]/g, "-").slice(0, 40)}`}
     className="group py-10 border-b border-[#E5DFD3] last:border-b-0"
   >
-    <div className="flex items-baseline gap-6 mb-4">
+    <div className="flex items-baseline gap-6 mb-2">
       <h4
         className="text-[#2C3E38] group-hover:text-[#1F4E5F] transition-colors"
         style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.85rem", fontWeight: 400 }}
@@ -41,6 +41,14 @@ const MenuItem = ({ item, i }) => (
         {item.price}€
       </span>
     </div>
+    {item.nameFr && (
+      <p
+        className="text-[#5C6B66]/85 italic mb-3"
+        style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 400, fontSize: "0.85rem", letterSpacing: "0.02em" }}
+      >
+        {item.nameFr}
+      </p>
+    )}
     <p
       className="text-[#5C6B66] text-sm md:text-[0.95rem] leading-relaxed max-w-2xl"
       style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
