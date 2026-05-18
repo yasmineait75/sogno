@@ -1,47 +1,56 @@
-# PRD — Le Jean Michel Breizh
+# PRD — Multi-Restaurant Showcase (Breizh + Sogno)
 
 ## Original Problem Statement
-> crée le site web pour ce restaurant https://www.google.com/maps/place/Le+Jean+Michel+Breizh/
-> (Crêperie / bistrot breton — 7 rue Gros, 75016 Paris)
-
-## User Choices (initial)
-- Style: laissé à l'agent → **Refined Breton Bistro** (élégant, Archetype "Organic & Earthy", thème light)
-- Fonctionnalités: vitrine + formulaire de réservation + formulaire de contact + bouton "Réserver"
-- Menu: inventé (galettes, crêpes, cidres bretons)
-- Intégrations externes: aucune (stockage en base uniquement, pas d'emailing)
-
-## Personas
-- **Anne, 38 ans, 16ᵉ Paris** — cherche une crêperie haut de gamme pour un dîner en famille
-- **Pierre & Sophie, 45 ans, expatriés bretons** — nostalgie du pays, veulent du sarrasin authentique
-- **Touristes francophones** — recherchent une expérience bretonne typique à Paris
+> Site vitrine pour le restaurant Le Jean Michel Breizh (crêperie bretonne)
+> + ajout d'un second restaurant Sogno (italien chic) sur URL séparée
 
 ## Architecture
-- **Backend**: FastAPI + MongoDB (Motor). Routes sous `/api`:
-  - `GET /api/restaurant` — infos publiques
-  - `POST /api/reservations` + `GET /api/reservations` — réservations
-  - `POST /api/contact` + `GET /api/contact` — messages
-- **Frontend**: React 19, Tailwind, shadcn/ui, framer-motion, Lenis smooth scroll
-  - Single-page : Hero → About (bento) → Menu (galettes/crêpes/cidres) → Gallery → Reservation+Contact → Footer
-- **Typo**: Cormorant Garamond (display), Manrope (body), Outfit (accents)
-- **Couleurs**: cream `#F9F6F0`, ocean navy `#1B2A47`, cider amber `#C27A3E`, granite `#1D2125`
+- **Frontend**: React Router v6
+  - `/` → Le Jean Michel Breizh (light cream/navy/cider, Cormorant Garamond)
+  - `/sogno` → Sogno Paris (Portofino editorial, Bodoni Moda + Manrope, deep Mediterranean blue + lemon yellow accents)
+- **Backend**: FastAPI + MongoDB partagé, champ `restaurant: "breizh" | "sogno"` sur reservations/contacts
+- **Routes**:
+  - `GET /api/restaurant` (Breizh info)
+  - `GET /api/restaurant/sogno` (Sogno info)
+  - `POST/GET /api/reservations` (filtré côté frontend)
+  - `POST/GET /api/contact`
 
-## Implemented (2026-05-18)
-- ✅ Backend: 4 routes + validation Pydantic (email, longueurs, ranges)
-- ✅ Frontend: 6 sections complètes, design éditorial sur-mesure
-- ✅ Formulaire de réservation (Calendar shadcn, lundi/dim désactivés, Select horaires & convives)
-- ✅ Formulaire de contact + toasts Sonner
-- ✅ Smooth scroll Lenis + animations framer-motion staggered
-- ✅ Tests : 8/8 backend + 100% flows frontend OK
+## Sogno — Identité finale
+- **Hero**: vue aérienne golden hour Portofino + terrasse dressée premier plan, titre "SOGNO Paris.", tagline italique "Par magie culinaire, voyagez du 16e à Portofino."
+- **Storia**: histoire authentique Thomas (fondateur, Pouilles, nonna) + Chef Dario, plat signature Uovo alla Valtellina, citation "Chaque repas est un voyage, et chaque assiette un souvenir."
+- **Menu**: 27 plats authentiques avec noms italiens + traduction française en italique + descriptions copywritées (Instagram-sourced)
+  - 8 Antipasti (Burrata, Vitello, Frittura, 2× Uovo, Prosciutto, Salumi, Gamberi)
+  - 6 Primi (Orecchiette, Mafalde, Linguine, 2× Lasagne, Sedanini)
+  - 4 Secondi (Pesce, Suprema tartufo, Ossobuco, Giardino)
+  - 6 Dolci (Tiramisù, 2× Panna cotta, Passione, Pera, Cannolo)
+  - 8 Cantina (Barolo, Brunello, Chianti, etc.)
+- **Galleria**: 5 photos AI dans le style Instagram Sogno (assiettes noires mates, éclairage tamisé bistrot chic) — Burrata, Linguine, Tiramisù, Vitello, Suprema
+- **Réservation**: calendrier (dimanche fermé), créneaux 12h-14h / 19h-22h, jusqu'à 8 couverts
+- **Contact**: formulaire séparé, stocké en base avec restaurant=sogno
+
+## Personas Sogno
+- **CSP++ Trocadéro / 16e** : couple cherchant table chic le soir, mariage/anniversaire
+- **Expatriés italiens** : nostalgie cuisine authentique régions Italie
+- **Foodies Paris** : recommandé par bouche-à-oreille, public Instagram
+
+## Implémenté (2026-05-18, itérations 1→7)
+- ✅ Site Breizh complet (hero, about, menu, galerie, réservation+contact, footer)
+- ✅ Site Sogno avec 7 itérations design (dark luxe → Portofino → Riviera Chic → restaurant Paris → magie culinaire)
+- ✅ Routing multi-restaurants partageant le backend
+- ✅ Backend partagé avec champ restaurant validé (pattern breizh|sogno)
+- ✅ Tests E2E backend (15/15) + frontend validés (3 itérations testing_agent)
+- ✅ Menu Sogno enrichi avec contenu Instagram authentique (chef Dario, Uovo alla Valtellina signature)
+- ✅ Galerie remplacée par photos AI style assiettes noires (cohérence Instagram)
 
 ## Backlog
 **P1**
-- [ ] Validation backend de la date (future + créneau dans les heures d'ouverture)
-- [ ] Rate-limiting / captcha léger sur POST publics
-- [ ] Dashboard admin pour visualiser réservations / messages
-- [ ] Envoi email de confirmation (Resend) optionnel
+- [ ] Photos réelles du chef Dario + Thomas (uploadées par client)
+- [ ] Email de confirmation de réservation (Resend) — high impact anti-no-show
+- [ ] Dashboard admin léger pour visualiser/valider les réservations par restaurant
+- [ ] SEO meta tags par restaurant (og:image, description)
 
 **P2**
-- [ ] i18n (FR/EN) pour la clientèle internationale du 16ᵉ
-- [ ] Gestion de capacité réelle (32 couverts, blocage si plein sur un créneau)
-- [ ] Galerie dynamique avec upload image admin
-- [ ] Page presse / avis clients
+- [ ] Internationalisation FR/EN/IT (clientèle internationale 16e)
+- [ ] Galerie Instagram embedded (auto-feed @sogno_paris)
+- [ ] Page presse + avis Google embed
+- [ ] Capacité réelle 36 couverts avec blocage des créneaux pleins
