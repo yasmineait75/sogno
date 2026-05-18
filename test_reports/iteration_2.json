@@ -1,0 +1,28 @@
+{
+  "summary": "Iteration 4 Sogno refonte hero/copy validated end-to-end. Backend regression 15/15 pass. Frontend /sogno loads with no console errors, hero shows linguine alle vongole image (SOGNO_MEDIA.vongole == SOGNO_MEDIA.hero), title contains 'Sogno' + 'Paris.', italic tagline 'L'Italie au cœur du 16e' present. No forbidden mentions (Portofino / di Portofino / Riviera ligure / Camogli / parasols rayés) anywhere in visible page text (hero/storia/footer/reservation). La Galleria contains 5 food/product items (Burrata, Linguine alle Vongole, Tiramisù, La Cantina, Limoni di Amalfi) — no terrace/Portofino landscape. All 5 menu tabs clickable and change content (Antipasti, Primi Piatti, Secondi, Dolci, La Cantina). Prices verified: Burrata 19€ (antipasti), Linguine alle vongole 24€ (primi). Reservation form submits successfully (date Tuesday, 20:00, 3 persone, TEST credentials) — success card displayed. Contact form submits successfully and clears. Breizh / route still renders correctly with no console errors.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_api.py",
+    "/app/test_reports/pytest/pytest_iter2.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Minor doc inconsistency in agent_to_agent_context_note: the request states the La Cantina tab data-testid is 'sogno-menu-tab-cantina'; the actual testid (from SognoMenu.jsx categories[].id='cave') is 'sogno-menu-tab-cave'. The tab works perfectly — just update the testing note for future agents.",
+    "Backend POST /reservations and /contact still return 200 instead of 201 (carried over from iteration 1) — acceptable but not strictly REST.",
+    "Reservation date/time validated only on the frontend (calendar disables past dates and Sundays); the API still accepts any string — direct POSTs to /api/reservations could bypass opening-hours rules.",
+    "No rate limiting on public POST endpoints (carried over)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (15/15)", "frontend": "100% (all Sogno + Breizh flows OK)"},
+  "test_credentials": "N/A — no auth in this app",
+  "seed_data_creation": "TEST_ prefixed entries created in reservations (TEST Sogno UI) and contact_messages (TEST Sogno Contact UI). Plus pytest TEST_ rows from test_api.py.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Sogno tabs use ids: antipasti, primi, secondi, dolci, cave (NOT 'cantina'). Use data-testid sogno-menu-tab-cave for La Cantina. Navigation links: sogno-nav-menu, sogno-nav-storia, sogno-nav-galleria, sogno-nav-prenotare. Lenis smooth scroll is active — click nav links to scroll rather than window.scrollTo. Reservation form testids: sogno-date-trigger, sogno-time-trigger, sogno-guests-trigger, sogno-name-input, sogno-phone-input, sogno-email-input, sogno-notes-input, sogno-reservation-submit, sogno-reservation-success. Contact form: sogno-contact-name/email/subject/message/submit. Calendar disables Sundays and past dates; pick a future Tuesday for tests. SOGNO_MEDIA.hero === SOGNO_MEDIA.vongole (same URL) — both point to the linguine alle vongole image.",
+  "rca of the issue": "No bugs."
+}

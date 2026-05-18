@@ -4,11 +4,11 @@ import { SOGNO_MEDIA } from "../../lib/sogno-data";
 
 export const SognoGalleria = () => {
   const items = [
-    { src: SOGNO_MEDIA.vongole, alt: "Linguine alle vongole", cls: "col-span-12 md:col-span-7 row-span-2 h-[460px]", caption: "Linguine alle Vongole" },
-    { src: SOGNO_MEDIA.burrata, alt: "Burrata", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Burrata di Puglia" },
+    { src: SOGNO_MEDIA.burrata, alt: "Burrata di Puglia", cls: "col-span-12 md:col-span-7 row-span-2 h-[460px]", caption: "Burrata di Puglia" },
+    { src: SOGNO_MEDIA.vongole, alt: "Linguine alle vongole", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Linguine alle Vongole" },
     { src: SOGNO_MEDIA.tiramisu, alt: "Tiramisu", cls: "col-span-6 md:col-span-5 h-[220px]", caption: "Tiramisù tradizionale" },
     { src: SOGNO_MEDIA.wine, alt: "Vermentino", cls: "col-span-6 md:col-span-4 h-[320px]", caption: "La Cantina" },
-    { src: SOGNO_MEDIA.hero, alt: "Terrasse Portofino", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Sala Riviera" },
+    { src: SOGNO_MEDIA.lemons, alt: "Citrons d'Amalfi", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Limoni di Amalfi" },
   ];
 
   return (
@@ -34,15 +34,15 @@ export const SognoGalleria = () => {
                 fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
               }}
             >
-              <em className="italic">Bellezza</em> al sole.
+              <em className="italic">Bellezza</em> nei dettagli.
             </h2>
           </div>
           <p
             className="text-[#5C6B66] max-w-sm md:text-right"
             style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
           >
-            Tournée comme une carte postale de la Riviera — citrons d'Amalfi,
-            nappes blanches, mer Ligure et un éclat de soleil dans chaque verre.
+            Tournée comme une carte postale italienne — chaque assiette dressée à
+            la minute, chaque produit choisi à la main par notre chef.
           </p>
         </div>
 

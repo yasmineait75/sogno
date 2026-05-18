@@ -16,9 +16,9 @@ export const SognoFooter = () => {
               className="text-[#5C6B66] text-sm leading-relaxed max-w-md"
               style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
             >
-              Sogno, c'est la Riviera ligure transportée à Paris — terrasse
-              ensoleillée, parasols rayés, citrons d'Amalfi et vermentinos
-              de Sardaigne. Depuis 2019, à deux pas du Trocadéro.
+              Sogno, l'Italie au cœur du 16<sup>e</sup>. Une cuisine d'auteur, un
+              sommelier passionné et une salle où l'on prend son temps —
+              à deux pas du Trocadéro, depuis 2019.
             </p>
           </div>
           <div>

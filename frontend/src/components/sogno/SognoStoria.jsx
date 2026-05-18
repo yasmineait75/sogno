@@ -38,8 +38,8 @@ export const SognoStoria = () => {
               fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
             }}
           >
-            La <em className="italic text-[#1F4E5F]">Riviera</em> ligure,
-            <br /> sur une <em className="italic" style={{ color: "#5B7B8C" }}>nappe blanche</em>.
+            L'<em className="italic text-[#1F4E5F]">Italie</em>, sur une
+            <br /> table de <em className="italic" style={{ color: "#5B7B8C" }}>marbre</em>.
           </h2>
 
           <div
@@ -47,18 +47,24 @@ export const SognoStoria = () => {
             style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
           >
             <p>
-              Une terrasse de Portofino, un parasol rayé blanc et bleu, la mer Ligure
-              qui scintille en contrebas — voilà l'image que nous avions en tête en
-              ouvrant Sogno, en 2019.
+              Sogno est né d'une certitude : la grande cuisine italienne mérite
+              sa table parisienne. Une table dressée chaque soir avec du
+              <em> linge blanc</em>, des verres en cristal et des assiettes
+              chargées de saveurs précises.
             </p>
             <p>
-              Lorenzo Russo, notre chef, vient de Camogli, à un jet de pierre du
-              fameux port. Il a grandi entre la basilique pastel et la pêche au
-              poulpe du dimanche matin. C'est cette Italie-là qu'il sert, sans le
-              cliché : burrate des Pouilles, vermentinos de Ligurie, citrons d'Amalfi
-              que l'on confit nous-mêmes.
+              Lorenzo Russo, notre chef, a appris la pâte fraîche dans la cuisine
+              de sa <em>nonna</em> avant de passer par les fourneaux de Massimo
+              Bottura. Il sélectionne lui-même chaque producteur : burrate des
+              Pouilles, jambon de Parme affiné 24 mois, citrons d'Amalfi et
+              huiles d'olive de Ligurie.
             </p>
-            <p className="text-[#1F4E5F] italic">« La vita è bella — surtout au soleil. »</p>
+            <p>
+              Dans la salle de 36 couverts, sobre et lumineuse, on prend son
+              temps. C'est l'Italie comme on l'aime — celle de la table
+              partagée, du vin généreux, du sourire de la mamma.
+            </p>
+            <p className="text-[#1F4E5F] italic">« La cucina è amore servito a tavola. »</p>
           </div>
 
           <div className="mt-14 grid grid-cols-3 gap-6 max-w-md">

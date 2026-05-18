@@ -7,15 +7,15 @@ export const SognoHero = () => {
     <section
       id="top"
       data-testid="sogno-hero"
-      className="relative min-h-screen w-full flex items-end overflow-hidden bg-[#F9F6F0]"
+      className="relative min-h-screen w-full flex items-end overflow-hidden bg-[#0E1A14]"
     >
       <div
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{ backgroundImage: `url(${SOGNO_MEDIA.hero})` }}
       />
-      {/* Soft sun-drenched overlays — keep it bright but ensure text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+      {/* Cinematic gradient — keep food visible top-right, text legible bottom-left */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/45 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-32">
         <motion.p
@@ -23,7 +23,7 @@ export const SognoHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1 }}
           className="text-[11px] uppercase tracking-[0.32em] text-[#E8B931] mb-10"
-          style={{ fontFamily: "'Manrope', sans-serif", textShadow: "0 1px 12px rgba(0,0,0,0.45)" }}
+          style={{ fontFamily: "'Manrope', sans-serif", textShadow: "0 1px 12px rgba(0,0,0,0.5)" }}
           data-testid="sogno-hero-overline"
         >
           Ristorante  •  Paris 16<sup>e</sup>  •  Dal 2019
@@ -33,40 +33,54 @@ export const SognoHero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.25, ease: [0.2, 0.7, 0.2, 1] }}
-          className="text-white leading-[0.85] tracking-tight"
+          className="text-white leading-[0.85] tracking-tight flex items-baseline gap-6 flex-wrap"
           style={{
             fontFamily: "'Bodoni Moda', serif",
             fontWeight: 400,
-            fontSize: "clamp(4rem, 13vw, 11rem)",
-            textShadow: "0 2px 28px rgba(0,0,0,0.35)",
+            textShadow: "0 2px 28px rgba(0,0,0,0.45)",
           }}
           data-testid="sogno-hero-title"
         >
-          Sogno
+          <span style={{ fontSize: "clamp(4.5rem, 14vw, 13rem)" }}>Sogno</span>
           <span
-            className="block italic mt-2"
-            style={{ fontSize: "clamp(2rem, 5vw, 4rem)", letterSpacing: "0.02em", color: "#E8B931" }}
+            className="italic"
+            style={{ fontSize: "clamp(1.5rem, 3.5vw, 3rem)", color: "#E8B931", letterSpacing: "0.02em" }}
           >
-            di Portofino.
+            Paris.
           </span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="mt-10 max-w-xl text-white/90 text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300, textShadow: "0 1px 12px rgba(0,0,0,0.5)" }}
+          transition={{ duration: 1, delay: 0.55 }}
+          className="mt-6 text-white/95 italic"
+          style={{
+            fontFamily: "'Bodoni Moda', serif",
+            fontWeight: 300,
+            fontSize: "clamp(1.1rem, 1.8vw, 1.45rem)",
+            textShadow: "0 1px 12px rgba(0,0,0,0.5)",
+          }}
         >
-          La Riviera ligure à deux pas du Trocadéro. Citrons d'Amalfi, vermentinos
-          de Sardaigne, lumière dorée et tables ensoleillées — chaque soir,
-          la Dolce Vita.
+          L'Italie au cœur du 16<sup>e</sup>.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          className="mt-8 max-w-xl text-white/80 text-base md:text-lg leading-relaxed"
+          style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300, textShadow: "0 1px 12px rgba(0,0,0,0.55)" }}
+        >
+          Une cuisine italienne d'auteur signée Lorenzo Russo. Pâtes fraîches du
+          matin, burratas des Pouilles, vermentinos de Sardaigne — servis à
+          deux pas du Trocadéro.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 1, delay: 0.9 }}
           className="mt-12 flex flex-wrap items-center gap-6"
         >
           <a
@@ -88,11 +102,10 @@ export const SognoHero = () => {
         </motion.div>
       </div>
 
-      {/* Marker bottom-right */}
       <div className="absolute bottom-10 right-8 z-10 hidden md:flex flex-col items-center gap-3">
         <div className="w-px h-16 bg-white/60" />
         <span
-          className="text-[10px] uppercase tracking-[0.32em] text-white/80 [writing-mode:vertical-rl]"
+          className="text-[10px] uppercase tracking-[0.32em] text-white/70 [writing-mode:vertical-rl]"
           style={{ fontFamily: "'Manrope', sans-serif" }}
         >
           Scorri

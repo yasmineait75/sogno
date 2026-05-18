@@ -105,9 +105,9 @@ export const SognoReservation = () => {
             className="mt-6 text-[#5C6B66] text-base md:text-lg max-w-xl"
             style={{ fontWeight: 300 }}
           >
-            Notre salle compte 36 couverts, parasols rayés bleu et blanc inclus.
-            Pour les groupes de plus de 8 personnes ou les privatisations,
-            contactez-nous directement.
+            Notre salle compte 36 couverts. Pour les groupes de plus de 8
+            personnes ou les privatisations, contactez-nous directement —
+            nous nous ferons un plaisir d'imaginer un menu sur mesure.
           </p>
         </motion.div>
 
