@@ -13,9 +13,10 @@ export const SognoHero = () => {
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{ backgroundImage: `url(${SOGNO_MEDIA.hero})` }}
       />
-      {/* Cinematic vignette */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908]/40 via-[#0a0908]/30 to-[#0a0908]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_#0a0908_85%)]" />
+      {/* Cinematic darkening — light enough to see the restaurant */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0908]/30 via-transparent to-[#0a0908]/85" />
+      {/* Soft side fade for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a0908]/70 via-[#0a0908]/15 to-transparent" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-32">
         <motion.p
