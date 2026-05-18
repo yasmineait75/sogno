@@ -49,7 +49,7 @@ export const SOGNO_PRIMI = [
 ];
 
 export const SOGNO_SECONDI = [
-  { name: "Filetto di pesce del giorno", desc: "Filet de poisson du jour, légumes de saison", price: "28" },
+  { name: "Filetto di pesce del giorno", desc: "Filet de poisson du jour délicatement saisi, légumes de saison colorés et savoureux — une cuisine simple, précise et respectueuse du produit", price: "28" },
   { name: "Ossobuco fondente", desc: "Ossobuco fondant, purée de pommes de terre, sauce gremolata", price: "29" },
   { name: "Giardino d'inverno", desc: "Jardin d'hiver : légumes de saison, salade d'herbes fraîches, huile d'olive verte", price: "19" },
 ];
