@@ -33,7 +33,7 @@ export const SognoReservation = () => {
   const handleReserve = async (e) => {
     e.preventDefault();
     if (!date || !time) {
-      toast.error("Selezioni una data e un orario, per favore.");
+      toast.error("Merci de sélectionner une date et un horaire.");
       return;
     }
     setSubmitting(true);
@@ -47,14 +47,14 @@ export const SognoReservation = () => {
       };
       const { data } = await axios.post(`${API}/reservations`, payload);
       setSuccess(data);
-      toast.success("Prenotazione ricevuta — grazie mille!");
+      toast.success("Réservation envoyée — merci !");
       setForm({ name: "", email: "", phone: "", notes: "" });
       setDate(null);
       setTime("");
       setGuests("2");
     } catch (err) {
       console.error(err);
-      toast.error("Si è verificato un errore.");
+      toast.error("Une erreur est survenue.");
     } finally {
       setSubmitting(false);
     }
@@ -65,7 +65,7 @@ export const SognoReservation = () => {
     setContactSubmitting(true);
     try {
       await axios.post(`${API}/contact`, { ...contact, restaurant: "sogno" });
-      toast.success("Grazie ! Le rispondiamo presto.");
+      toast.success("Message envoyé. Nous vous répondons sous peu.");
       setContact({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
       console.error(err);
@@ -90,7 +90,7 @@ export const SognoReservation = () => {
           viewport={{ once: true }}
           className="max-w-3xl mb-20"
         >
-          <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-8">— Prenotazione</p>
+          <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-8">— Réservation</p>
           <h2
             className="leading-[1.02] tracking-tight"
             style={{
@@ -99,7 +99,7 @@ export const SognoReservation = () => {
               fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
             }}
           >
-            Riservi il <em className="italic text-[#1F4E5F]">vostro</em> tavolo.
+            Réservez <em className="italic text-[#1F4E5F]">votre</em> table.
           </h2>
           <p
             className="mt-6 text-[#5C6B66] text-base md:text-lg max-w-xl"
@@ -112,15 +112,14 @@ export const SognoReservation = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Practical info */}
           <div className="lg:col-span-5 space-y-12">
-            <InfoBlock icon={<MapPin size={18} />} title="Indirizzo">
+            <InfoBlock icon={<MapPin size={18} />} title="Adresse">
               {SOGNO.address}
               <br />
               <span className="text-[#5C6B66]">{SOGNO.metro}</span>
             </InfoBlock>
 
-            <InfoBlock icon={<Clock size={18} />} title="Orari">
+            <InfoBlock icon={<Clock size={18} />} title="Horaires">
               <div className="space-y-2 mt-2">
                 {SOGNO_HOURS.map((h) => (
                   <div key={h.day} className="flex justify-between gap-6 text-sm" style={{ fontWeight: 300 }}>
@@ -131,7 +130,7 @@ export const SognoReservation = () => {
               </div>
             </InfoBlock>
 
-            <InfoBlock icon={<Phone size={18} />} title="Telefono">
+            <InfoBlock icon={<Phone size={18} />} title="Téléphone">
               <a href={`tel:${SOGNO.phone}`} className="hover:text-[#1F4E5F] transition-colors">
                 {SOGNO.phone}
               </a>
@@ -154,17 +153,16 @@ export const SognoReservation = () => {
             </div>
           </div>
 
-          {/* Reservation form */}
           <div className="lg:col-span-7">
             <div className="bg-[#F9F6F0] border border-[#E5DFD3] p-8 md:p-12">
               <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-3">
-                Modulo di prenotazione
+                Formulaire de réservation
               </p>
               <h3
                 className="mb-10 text-[#2C3E38]"
                 style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "2.25rem", fontWeight: 400 }}
               >
-                Un tavolo per voi
+                Une table pour vous
               </h3>
 
               {success ? (
@@ -173,7 +171,7 @@ export const SognoReservation = () => {
                 <form onSubmit={handleReserve} className="space-y-6" data-testid="sogno-reservation-form">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                      <label className={labelCls}>Data</label>
+                      <label className={labelCls}>Date</label>
                       <Popover>
                         <PopoverTrigger asChild>
                           <button
@@ -182,7 +180,7 @@ export const SognoReservation = () => {
                             className={`${inputCls} text-left flex items-center justify-between`}
                           >
                             <span className={date ? "" : "text-[#5C6B66]/55"} style={{ fontWeight: 300 }}>
-                              {date ? format(date, "PPP", { locale: fr }) : "Selezionare"}
+                              {date ? format(date, "PPP", { locale: fr }) : "Sélectionner"}
                             </span>
                             <CalendarIcon size={16} className="text-[#1F4E5F]" />
                           </button>
@@ -209,10 +207,10 @@ export const SognoReservation = () => {
                     </div>
 
                     <div>
-                      <label className={labelCls}>Orario</label>
+                      <label className={labelCls}>Horaire</label>
                       <Select value={time} onValueChange={setTime}>
                         <SelectTrigger className={`${inputCls} text-left`} data-testid="sogno-time-trigger">
-                          <SelectValue placeholder="Selezionare" />
+                          <SelectValue placeholder="Sélectionner" />
                         </SelectTrigger>
                         <SelectContent className="bg-white text-[#2C3E38] border-[#E5DFD3] rounded-none">
                           {SOGNO_TIME_SLOTS.map((t) => (
@@ -225,7 +223,7 @@ export const SognoReservation = () => {
                     </div>
 
                     <div>
-                      <label className={labelCls}>Coperti</label>
+                      <label className={labelCls}>Couverts</label>
                       <Select value={guests} onValueChange={setGuests}>
                         <SelectTrigger className={`${inputCls} text-left`} data-testid="sogno-guests-trigger">
                           <SelectValue />
@@ -233,10 +231,10 @@ export const SognoReservation = () => {
                         <SelectContent className="bg-white text-[#2C3E38] border-[#E5DFD3] rounded-none">
                           {[1, 2, 3, 4, 5, 6, 7, 8].map((g) => (
                             <SelectItem key={g} value={String(g)} className="focus:bg-[#1F4E5F] focus:text-white">
-                              {g} {g > 1 ? "persone" : "persona"}
+                              {g} {g > 1 ? "personnes" : "personne"}
                             </SelectItem>
                           ))}
-                          <SelectItem value="9" className="focus:bg-[#1F4E5F] focus:text-white">9+ — contattateci</SelectItem>
+                          <SelectItem value="9" className="focus:bg-[#1F4E5F] focus:text-white">9+ — nous contacter</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -244,18 +242,18 @@ export const SognoReservation = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className={labelCls}>Nome</label>
+                      <label className={labelCls}>Nom</label>
                       <Input
                         required
                         data-testid="sogno-name-input"
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
                         className={inputCls}
-                        placeholder="Il vostro nome"
+                        placeholder="Votre nom"
                       />
                     </div>
                     <div>
-                      <label className={labelCls}>Telefono</label>
+                      <label className={labelCls}>Téléphone</label>
                       <Input
                         required
                         data-testid="sogno-phone-input"
@@ -276,20 +274,20 @@ export const SognoReservation = () => {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       className={inputCls}
-                      placeholder="voi@email.com"
+                      placeholder="vous@email.com"
                     />
                   </div>
 
                   <div>
                     <label className={labelCls}>
-                      Richieste speciali <span className="lowercase text-[#5C6B66]/55">(opzionale)</span>
+                      Demandes spéciales <span className="lowercase text-[#5C6B66]/55">(facultatif)</span>
                     </label>
                     <Textarea
                       data-testid="sogno-notes-input"
                       value={form.notes}
                       onChange={(e) => setForm({ ...form, notes: e.target.value })}
                       className={`${inputCls} h-28 py-3`}
-                      placeholder="Allergie, anniversario, tavolo vicino alla finestra..."
+                      placeholder="Allergie, anniversaire, table à proximité de la fenêtre…"
                     />
                   </div>
 
@@ -300,20 +298,19 @@ export const SognoReservation = () => {
                     className="text-[11px] uppercase tracking-[0.22em] font-semibold px-10 py-4 bg-[#1F4E5F] text-white hover:bg-[#173B49] transition-colors disabled:opacity-60 flex items-center gap-3"
                   >
                     {submitting ? <Loader2 className="animate-spin" size={16} /> : null}
-                    {submitting ? "Invio…" : "Confermare la prenotazione"}
+                    {submitting ? "Envoi…" : "Confirmer la réservation"}
                   </button>
                 </form>
               )}
             </div>
 
-            {/* Contact form */}
             <div className="bg-[#F9F6F0] border border-[#E5DFD3] p-8 md:p-12 mt-8" id="contact">
-              <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-3">— Scriveteci</p>
+              <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-3">— Nous écrire</p>
               <h3
                 className="mb-8 text-[#2C3E38]"
                 style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "2.25rem", fontWeight: 400 }}
               >
-                Un messaggio ?
+                Un message ?
               </h3>
               <form onSubmit={handleContact} className="space-y-5" data-testid="sogno-contact-form">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -323,7 +320,7 @@ export const SognoReservation = () => {
                     value={contact.name}
                     onChange={(e) => setContact({ ...contact, name: e.target.value })}
                     className={inputCls}
-                    placeholder="Il vostro nome"
+                    placeholder="Votre nom"
                   />
                   <Input
                     required
@@ -340,7 +337,7 @@ export const SognoReservation = () => {
                   value={contact.subject}
                   onChange={(e) => setContact({ ...contact, subject: e.target.value })}
                   className={inputCls}
-                  placeholder="Oggetto (opzionale)"
+                  placeholder="Sujet (facultatif)"
                 />
                 <Textarea
                   required
@@ -348,7 +345,7 @@ export const SognoReservation = () => {
                   value={contact.message}
                   onChange={(e) => setContact({ ...contact, message: e.target.value })}
                   className={`${inputCls} h-32 py-3`}
-                  placeholder="Il vostro messaggio…"
+                  placeholder="Votre message…"
                 />
                 <button
                   type="submit"
@@ -357,7 +354,7 @@ export const SognoReservation = () => {
                   className="text-[11px] uppercase tracking-[0.22em] px-8 py-3 border border-[#2C3E38] text-[#2C3E38] hover:bg-[#2C3E38] hover:text-white transition-colors disabled:opacity-60 flex items-center gap-3"
                 >
                   {contactSubmitting ? <Loader2 className="animate-spin" size={16} /> : null}
-                  {contactSubmitting ? "Invio…" : "Inviare il messaggio"}
+                  {contactSubmitting ? "Envoi…" : "Envoyer le message"}
                 </button>
               </form>
             </div>
@@ -385,12 +382,12 @@ const SuccessCard = ({ data, onReset }) => (
     data-testid="sogno-reservation-success"
     className="border border-[#1F4E5F]/40 bg-[#1F4E5F]/5 p-8"
   >
-    <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-4">Prenotazione ricevuta</p>
+    <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-4">Réservation reçue</p>
     <h4
       className="mb-4 text-[#2C3E38]"
       style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.8rem", fontWeight: 400 }}
     >
-      Grazie {data?.name?.split(" ")[0]} — vi aspettiamo!
+      Merci {data?.name?.split(" ")[0]} — nous vous attendons !
     </h4>
     <p className="text-[#5C6B66] text-sm leading-relaxed" style={{ fontWeight: 300 }}>
       Votre demande pour <strong className="text-[#2C3E38]">{data?.guests} personne(s)</strong> le{" "}
@@ -403,7 +400,7 @@ const SuccessCard = ({ data, onReset }) => (
       data-testid="sogno-reservation-reset"
       className="mt-6 text-[11px] uppercase tracking-[0.28em] border-b border-[#1F4E5F] pb-1 text-[#1F4E5F] hover:text-[#2C3E38] hover:border-[#2C3E38] transition-colors"
     >
-      Nuova prenotazione →
+      Nouvelle réservation →
     </button>
   </div>
 );

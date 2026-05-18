@@ -27,7 +27,7 @@ export const SognoStoria = () => {
               className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F]"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              La Storia
+              Notre histoire
             </p>
           </div>
           <h2
@@ -76,9 +76,9 @@ export const SognoStoria = () => {
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-            <Stat value="2019" label="Apertura" />
-            <Stat value="36" label="Coperti" />
-            <Stat value="120+" label="Etichette di vino" />
+            <Stat value="2019" label="Ouverture" />
+            <Stat value="36" label="Couverts" />
+            <Stat value="120+" label="Vins à la carte" />
           </div>
         </motion.div>
 

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#storia", label: "La Storia" },
-  { href: "#menu", label: "Il Menu" },
-  { href: "#galleria", label: "Galleria" },
-  { href: "#prenotare", label: "Contatto" },
+  { href: "#storia", label: "Notre histoire" },
+  { href: "#menu", label: "La carte" },
+  { href: "#galleria", label: "Galerie" },
+  { href: "#prenotare", label: "Contact" },
 ];
 
 export const SognoNavbar = () => {
@@ -62,7 +62,7 @@ export const SognoNavbar = () => {
             }`}
             style={{ fontFamily: "'Manrope', sans-serif" }}
           >
-            Prenotare
+            Réserver
           </a>
           <Link
             to="/"
@@ -110,7 +110,7 @@ export const SognoNavbar = () => {
               className="text-[11px] uppercase tracking-[0.22em] bg-[#1F4E5F] text-white px-6 py-3 text-center mt-2"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              Prenotare
+              Réserver une table
             </a>
           </div>
         </div>

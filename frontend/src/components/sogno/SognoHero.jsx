@@ -36,7 +36,7 @@ export const SognoHero = () => {
           }}
           data-testid="sogno-hero-overline"
         >
-          Ristorante  •  Paris 16<sup>e</sup>  •  Dal 2019
+          Restaurant  •  Paris 16<sup>e</sup>  •  Depuis 2019
         </motion.p>
 
         <motion.h1
@@ -109,7 +109,7 @@ export const SognoHero = () => {
             className="text-[11px] uppercase tracking-[0.22em] font-semibold px-10 py-4 bg-[#1F4E5F] text-white hover:bg-[#173B49] transition-colors"
             style={{ fontFamily: "'Manrope', sans-serif" }}
           >
-            Prenotare un tavolo
+            Réserver une table
           </a>
           <a
             href="#menu"
@@ -117,7 +117,7 @@ export const SognoHero = () => {
             className="text-[11px] uppercase tracking-[0.22em] text-white border-b border-white pb-1 hover:text-[#E8B931] hover:border-[#E8B931] transition-colors"
             style={{ fontFamily: "'Manrope', sans-serif" }}
           >
-            Scopri la carta →
+            Découvrir la carte →
           </a>
         </motion.div>
       </div>
@@ -128,7 +128,7 @@ export const SognoHero = () => {
           className="text-[10px] uppercase tracking-[0.32em] text-white/70 [writing-mode:vertical-rl]"
           style={{ fontFamily: "'Manrope', sans-serif" }}
         >
-          Scorri
+          Défiler
         </span>
       </div>
     </section>

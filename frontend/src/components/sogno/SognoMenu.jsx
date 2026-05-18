@@ -85,7 +85,7 @@ export const SognoMenu = () => {
             className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-8"
             style={{ fontFamily: "'Manrope', sans-serif" }}
           >
-            — La Carta
+            — La carte
           </p>
           <h2
             className="leading-[1.02] tracking-tight"
@@ -95,7 +95,7 @@ export const SognoMenu = () => {
               fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
             }}
           >
-            <em className="italic">Cinque</em> capitoli, un seul <em className="italic text-[#1F4E5F]">amore</em>.
+            <em className="italic">Cinq</em> chapitres, un seul <em className="italic text-[#1F4E5F]">amour</em>.
           </h2>
           <p
             className="mt-6 text-[#5C6B66] text-base md:text-lg"

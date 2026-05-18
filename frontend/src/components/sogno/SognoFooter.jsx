@@ -11,7 +11,7 @@ export const SognoFooter = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-[#E5DFD3] pb-16">
           <div className="md:col-span-2">
-            <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-5">— Il Ristorante</p>
+            <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-5">— Le restaurant</p>
             <p
               className="text-[#5C6B66] text-sm leading-relaxed max-w-md"
               style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
@@ -22,7 +22,7 @@ export const SognoFooter = () => {
             </p>
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-5">Indirizzo</p>
+            <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-5">Adresse</p>
             <p
               className="text-[#5C6B66] text-sm leading-relaxed"
               style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
@@ -33,7 +33,7 @@ export const SognoFooter = () => {
             </p>
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-5">Contatto</p>
+            <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-5">Contact</p>
             <p
               className="text-[#5C6B66] text-sm leading-relaxed"
               style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
@@ -68,9 +68,9 @@ export const SognoFooter = () => {
           className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[10px] uppercase tracking-[0.28em] text-[#5C6B66]"
           style={{ fontFamily: "'Manrope', sans-serif" }}
         >
-          <span>© {new Date().getFullYear()} — Sogno Paris. Tutti i diritti riservati</span>
+          <span>© {new Date().getFullYear()} — Sogno Paris. Tous droits réservés</span>
           <Link to="/" className="hover:text-[#1F4E5F] transition-colors">
-            Visitare Le Jean Michel Breizh ↗
+            Visiter Le Jean Michel Breizh ↗
           </Link>
         </div>
       </div>

@@ -24,7 +24,7 @@ export const SognoGalleria = () => {
               className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-6"
               style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              — La Galleria
+              — Galerie
             </p>
             <h2
               className="leading-[1.02] tracking-tight"
