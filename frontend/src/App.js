@@ -1,53 +1,17 @@
-import React, { useEffect } from "react";
 import "@/App.css";
-import Lenis from "@studio-freight/lenis";
-import { Toaster } from "sonner";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Menu from "./components/Menu";
-import Gallery from "./components/Gallery";
-import Reservation from "./components/Reservation";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BreizhPage from "./pages/BreizhPage";
+import SognoPage from "./pages/SognoPage";
 
 function App() {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    return () => lenis.destroy();
-  }, []);
-
   return (
     <div className="App">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Menu />
-        <Gallery />
-        <Reservation />
-      </main>
-      <Footer />
-      <Toaster
-        position="bottom-right"
-        toastOptions={{
-          style: {
-            background: "#1D2125",
-            color: "#F9F6F0",
-            border: "1px solid rgba(234,228,217,0.15)",
-            borderRadius: 0,
-            fontFamily: "Manrope, sans-serif",
-          },
-        }}
-      />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<BreizhPage />} />
+          <Route path="/sogno" element={<SognoPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -31,6 +31,7 @@ api_router = APIRouter(prefix="/api")
 class Reservation(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    restaurant: str = "breizh"  # "breizh" | "sogno"
     name: str
     email: EmailStr
     phone: str
@@ -43,6 +44,7 @@ class Reservation(BaseModel):
 
 
 class ReservationCreate(BaseModel):
+    restaurant: str = Field(default="breizh", pattern="^(breizh|sogno)$")
     name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     phone: str = Field(min_length=5, max_length=40)
@@ -55,6 +57,7 @@ class ReservationCreate(BaseModel):
 class ContactMessage(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    restaurant: str = "breizh"
     name: str
     email: EmailStr
     subject: Optional[str] = ""
@@ -63,6 +66,7 @@ class ContactMessage(BaseModel):
 
 
 class ContactCreate(BaseModel):
+    restaurant: str = Field(default="breizh", pattern="^(breizh|sogno)$")
     name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     subject: Optional[str] = Field(default="", max_length=200)
@@ -134,6 +138,26 @@ async def get_restaurant_info():
             {"day": "Jeudi", "value": "12h15 – 14h15  •  19h30 – 22h00"},
             {"day": "Vendredi", "value": "12h15 – 14h15  •  19h30 – 22h00"},
             {"day": "Samedi", "value": "13h00 – 21h30"},
+            {"day": "Dimanche", "value": "Fermé"},
+        ],
+    }
+
+
+@api_router.get("/restaurant/sogno")
+async def get_sogno_info():
+    return {
+        "name": "Sogno",
+        "tagline": "Ristorante Italiano  •  Trocadéro",
+        "address": "42 Rue de l'Amiral Hamelin, 75016 Paris",
+        "phone": "+33 1 47 04 02 02",
+        "email": "ciao@sogno-paris.fr",
+        "hours": [
+            {"day": "Lundi", "value": "12h00 – 14h30  •  19h00 – 23h00"},
+            {"day": "Mardi", "value": "12h00 – 14h30  •  19h00 – 23h00"},
+            {"day": "Mercredi", "value": "12h00 – 14h30  •  19h00 – 23h00"},
+            {"day": "Jeudi", "value": "12h00 – 14h30  •  19h00 – 23h30"},
+            {"day": "Vendredi", "value": "12h00 – 14h30  •  19h00 – 23h30"},
+            {"day": "Samedi", "value": "19h00 – 23h30"},
             {"day": "Dimanche", "value": "Fermé"},
         ],
     }
