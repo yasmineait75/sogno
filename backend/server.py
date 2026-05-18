@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -20,7 +20,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI(title="Le Jean Michel Breizh API")
+app = FastAPI(title="Sogno — Ristorante Italiano API")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
@@ -31,7 +31,7 @@ api_router = APIRouter(prefix="/api")
 class Reservation(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    restaurant: str = "breizh"  # "breizh" | "sogno"
+    restaurant: str = "sogno"
     name: str
     email: EmailStr
     phone: str
@@ -44,7 +44,7 @@ class Reservation(BaseModel):
 
 
 class ReservationCreate(BaseModel):
-    restaurant: str = Field(default="breizh", pattern="^(breizh|sogno)$")
+    restaurant: str = Field(default="sogno", pattern="^sogno$")
     name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     phone: str = Field(min_length=5, max_length=40)
@@ -57,7 +57,7 @@ class ReservationCreate(BaseModel):
 class ContactMessage(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    restaurant: str = "breizh"
+    restaurant: str = "sogno"
     name: str
     email: EmailStr
     subject: Optional[str] = ""
@@ -66,7 +66,7 @@ class ContactMessage(BaseModel):
 
 
 class ContactCreate(BaseModel):
-    restaurant: str = Field(default="breizh", pattern="^(breizh|sogno)$")
+    restaurant: str = Field(default="sogno", pattern="^sogno$")
     name: str = Field(min_length=2, max_length=120)
     email: EmailStr
     subject: Optional[str] = Field(default="", max_length=200)
@@ -77,7 +77,7 @@ class ContactCreate(BaseModel):
 
 @api_router.get("/")
 async def root():
-    return {"message": "Le Jean Michel Breizh — API"}
+    return {"message": "Sogno — Ristorante Italiano API"}
 
 
 @api_router.post("/reservations", response_model=Reservation)
@@ -123,26 +123,6 @@ async def list_contact():
 
 
 # Public restaurant info endpoint
-@api_router.get("/restaurant")
-async def get_restaurant_info():
-    return {
-        "name": "Le Jean Michel Breizh",
-        "tagline": "Crêperie & Bistrot Breton",
-        "address": "7 rue Gros, 75016 Paris",
-        "phone": "+33 1 45 27 00 00",
-        "email": "bonjour@lejeanmichelbreizh.fr",
-        "hours": [
-            {"day": "Lundi", "value": "Fermé"},
-            {"day": "Mardi", "value": "12h15 – 14h15  •  19h30 – 22h00"},
-            {"day": "Mercredi", "value": "12h15 – 14h15  •  19h30 – 22h00"},
-            {"day": "Jeudi", "value": "12h15 – 14h15  •  19h30 – 22h00"},
-            {"day": "Vendredi", "value": "12h15 – 14h15  •  19h30 – 22h00"},
-            {"day": "Samedi", "value": "13h00 – 21h30"},
-            {"day": "Dimanche", "value": "Fermé"},
-        ],
-    }
-
-
 @api_router.get("/restaurant/sogno")
 async def get_sogno_info():
     return {

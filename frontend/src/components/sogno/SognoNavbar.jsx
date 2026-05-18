@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -64,19 +63,6 @@ export const SognoNavbar = () => {
           >
             Réserver
           </a>
-          <Link
-            to="/"
-            data-testid="sogno-nav-other-site"
-            className={`text-[11px] uppercase tracking-[0.22em] transition-colors border-l pl-6 ${
-              scrolled
-                ? "text-[#5C6B66] hover:text-[#1F4E5F] border-[#E5DFD3]"
-                : "text-white/70 hover:text-white border-white/40"
-            }`}
-            style={{ fontFamily: "'Manrope', sans-serif" }}
-            title="Visiter Le Jean Michel Breizh"
-          >
-            Breizh ↗
-          </Link>
         </nav>
 
         <button

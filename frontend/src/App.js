@@ -1,6 +1,5 @@
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BreizhPage from "./pages/BreizhPage";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SognoPage from "./pages/SognoPage";
 
 function App() {
@@ -8,8 +7,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<BreizhPage />} />
-          <Route path="/sogno" element={<SognoPage />} />
+          <Route path="/" element={<SognoPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </div>

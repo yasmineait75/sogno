@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { SOGNO } from "../../lib/sogno-data";
 
 export const SognoFooter = () => {
@@ -69,9 +68,6 @@ export const SognoFooter = () => {
           style={{ fontFamily: "'Manrope', sans-serif" }}
         >
           <span>© {new Date().getFullYear()} — Sogno Paris. Tous droits réservés</span>
-          <Link to="/" className="hover:text-[#1F4E5F] transition-colors">
-            Visiter Le Jean Michel Breizh ↗
-          </Link>
         </div>
       </div>
     </footer>
