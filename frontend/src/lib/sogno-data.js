@@ -59,8 +59,8 @@ export const SOGNO_SECONDI = [
 ];
 
 export const SOGNO_DOLCI = [
-  { name: "Tiramisù tradizionale", desc: "Tiramisu traditionnel, mascarpone & café espresso", price: "13" },
-  { name: "Panna cotta, confettura di fichi e noci", desc: "Panna cotta, confiture de figue et noix fraîches", price: "10" },
+  { name: "Tiramisù tradizionale", desc: "Biscuits délicatement imbibés de café, crème mascarpone onctueuse, voile généreux de cacao — fondant, intense, préparé dans le respect de la tradition", price: "13" },
+  { name: "Panna cotta alla pera e caramello salato", desc: "Panna cotta délicatement vanillée, coulis de poire fraîche, croccante au caramel salé — fondante, fraîche, légèrement croquante", price: "10" },
   { name: "Passione Cioccolato", desc: "Crumble au chocolat, glace au chocolat, mousse au chocolat à la fleur de sel", price: "12" },
   { name: "Pera al profumo di vaniglia", desc: "Poire pochée au sirop de vanille, crème de ricotta et miel, sauce caramel au beurre salé tiède", price: "14" },
 ];
