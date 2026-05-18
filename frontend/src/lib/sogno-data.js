@@ -47,6 +47,7 @@ export const SOGNO_PRIMI = [
   { name: "Mafalde ricce ai funghi", desc: "Mafalde ricce à la sauce aux champignons, ciboulette, crème de caciocavallo", price: "22" },
   { name: "Linguine alle vongole", desc: "Linguine délicatement enrobées, palourdes savoureuses, parfums marins tout en finesse — supplément bottarga di muggine pour une touche iodée intense (+6€)", price: "24" },
   { name: "Lasagna al ragù di manzo", desc: "Couches fondantes de pâtes, ragoût de bœuf mijoté avec patience, sauce riche et réconfortante, gratinée à la perfection — un grand classique généreux et authentique", price: "23" },
+  { name: "Lasagne bianche alla Genovese con anatra brasata", desc: "Couches de pâtes fraîches, sauce Genovese longuement mijotée, canard fondant, crème onctueuse gratinée au four jusqu'à obtenir une croûte dorée — généreuses, fondantes et intensément savoureuses", price: "26" },
   { name: "Sedanini al pomodoro con melanzane", desc: "Sauce tomate mijotée, aubergines fondantes, câpres délicatement salines et thon frais cuit lentement dans la sauce — vibrant, parfumé, profondément méditerranéen", price: "22" },
 ];
 
