@@ -6,9 +6,9 @@ export const SognoGalleria = () => {
   const items = [
     { src: SOGNO_MEDIA.burrata, alt: "Burrata di Puglia", cls: "col-span-12 md:col-span-7 row-span-2 h-[460px]", caption: "Burrata di Puglia" },
     { src: SOGNO_MEDIA.vongole, alt: "Linguine alle vongole", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Linguine alle Vongole" },
-    { src: SOGNO_MEDIA.tiramisu, alt: "Tiramisu", cls: "col-span-6 md:col-span-5 h-[220px]", caption: "Tiramisù tradizionale" },
-    { src: SOGNO_MEDIA.wine, alt: "Vermentino", cls: "col-span-6 md:col-span-4 h-[320px]", caption: "La Cantina" },
-    { src: SOGNO_MEDIA.lemons, alt: "Citrons d'Amalfi", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Limoni di Amalfi" },
+    { src: SOGNO_MEDIA.tiramisu, alt: "Tiramisù", cls: "col-span-6 md:col-span-5 h-[220px]", caption: "Tiramisù tradizionale" },
+    { src: SOGNO_MEDIA.vitello, alt: "Vitello tonnato", cls: "col-span-6 md:col-span-4 h-[320px]", caption: "Vitello tonnato" },
+    { src: SOGNO_MEDIA.suprema, alt: "Suprema di pollo", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Suprema di pollo al tartufo" },
   ];
 
   return (

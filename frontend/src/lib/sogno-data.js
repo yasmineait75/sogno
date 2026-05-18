@@ -26,9 +26,11 @@ export const SOGNO_MEDIA = {
   terrace: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/4c0414d0b4a5be4a9faeabb483e3724ff1a29523455ca7c17316c334bc836dc0.png",
   lemons: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/62b296b3937c99c07d03c8f8d5ae556ddadd1217ac3e55c68322fa73621d0cf5.png",
   wine: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/bc554cc7e0b3d75853b8e8f3dc13772e4acee8cf90638a593ba5f967dff13b8a.png",
-  vongole: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/910de659658176caf5bf494fa88ae160823196768e397dff88fa20aee84a06f6.png",
-  burrata: "https://images.unsplash.com/photo-1614887101277-22d7168ab9c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJ1cnJhdGElMjBjaGVlc2UlMjBicmlnaHQlMjBwbGF0ZXxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
-  tiramisu: "https://images.unsplash.com/photo-1698688334089-c68105801d02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0aXJhbWlzdSUyMGRlc3NlcnQlMjBlbGVnYW50JTIwYnJpZ2h0fGVufDB8fHx8MTc3OTEyNTEzN3ww&ixlib=rb-4.1.0&q=85",
+  vongole: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/0a5406d86727189dce7bda82d9c4bf8d57b30a3105d2a3911dfde884c4b1945c.png",
+  burrata: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/3c8ec45203b355e697e320288f50aa34e7164d2625d6b84a3790114438b66b84.png",
+  tiramisu: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/6894dc24d33f9dbd596972d0823d8b691640c499de5c33bfdc8ddd44020252d6.png",
+  vitello: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/6511cff38f19ec70150311a69614c409fd1bcc8d95780766e03cf982fadb8d14.png",
+  suprema: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/613ace6533ed1b9be7ed284c2aedf6a27f547b5c532fac0d421a93f379205d0b.png",
 };
 
 export const SOGNO_ANTIPASTI = [
