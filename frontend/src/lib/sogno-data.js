@@ -38,6 +38,7 @@ export const SOGNO_ANTIPASTI = [
   { name: "Uovo alla Valtellina", desc: "Œuf parfait au cœur coulant, crème onctueuse de pecorino, speck de Valtellina, noisettes torréfiées", price: "16" },
   { name: "Uovo cotto a bassa temperatura", desc: "Œuf parfait au cœur coulant, champignons de saison sautés à la ciboulette, mousse de scamorza fumée — un jeu subtil de textures et saveurs", price: "15" },
   { name: "Prosciutto di Parma", desc: "Jambon de Parme affiné 24 mois, focaccia tiède", price: "16" },
+  { name: "Assortimento di salumi italiani", desc: "Prosciutto di Parma affiné 24 mois, Spianata piccante, Mortadella délicatement parfumée — assortiment généreux à partager (ou pas), idéal avec un bon verre de vin", price: "22" },
 ];
 
 export const SOGNO_PRIMI = [
