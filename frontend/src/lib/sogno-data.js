@@ -43,7 +43,7 @@ export const SOGNO_PRIMI = [
   { name: "Orecchiette alla crema di Taleggio", desc: "Orecchiette, crème de Taleggio, noix au romarin et chou kale croustillant", price: "21" },
   { name: "Mafalde ricce ai funghi", desc: "Mafalde ricce à la sauce aux champignons, ciboulette, crème de caciocavallo", price: "22" },
   { name: "Linguine alle vongole", desc: "Linguine délicatement enrobées, palourdes savoureuses, parfums marins tout en finesse — supplément bottarga di muggine pour une touche iodée intense (+6€)", price: "24" },
-  { name: "Lasagna al ragù di manzo", desc: "Lasagne au ragoût de bœuf, mijotée pendant 6 heures", price: "23" },
+  { name: "Lasagna al ragù di manzo", desc: "Couches fondantes de pâtes, ragoût de bœuf mijoté avec patience, sauce riche et réconfortante, gratinée à la perfection — un grand classique généreux et authentique", price: "23" },
   { name: "Sedanini al pomodoro con melanzane", desc: "Sedanini, sauce tomate, aubergines, câpres et thon frais mijoté dans la sauce", price: "22" },
 ];
 
