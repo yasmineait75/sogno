@@ -62,7 +62,7 @@ export const SOGNO_DOLCI = [
   { name: "Tiramisù tradizionale", desc: "Biscuits délicatement imbibés de café, crème mascarpone onctueuse, voile généreux de cacao — fondant, intense, préparé dans le respect de la tradition", price: "13" },
   { name: "Panna cotta alla pera e caramello salato", desc: "Panna cotta délicatement vanillée, coulis de poire fraîche, croccante au caramel salé — fondante, fraîche, légèrement croquante", price: "10" },
   { name: "Panna cotta, confettura di fichi e noci", desc: "Panna cotta délicatement fondante, confiture de figue maison, noix fraîches pour une touche croquante — équilibre entre gourmandise et finesse", price: "10" },
-  { name: "Passione Cioccolato", desc: "Crumble au chocolat, glace au chocolat, mousse au chocolat à la fleur de sel", price: "12" },
+  { name: "Passione Cioccolato", desc: "Crumble au chocolat, glace au chocolat, mousse au chocolat relevée d'une touche de fleur de sel — profond, intense et terriblement gourmand", price: "12" },
   { name: "Pera al profumo di vaniglia", desc: "Poire pochée au sirop de vanille, crème de ricotta et miel, sauce caramel au beurre salé tiède", price: "14" },
   { name: "Cannolo siciliano destrutturato", desc: "Interprétation moderne d'un classique sicilien : mousse de ricotta à la vanille, glace pistache onctueuse, cialda croustillante — un jeu de textures, températures et saveurs", price: "12" },
 ];
