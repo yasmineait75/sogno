@@ -1,149 +1,108 @@
 {
-  "theme_and_archetype": {
-    "domain": "Restaurant / Fine Dining Bistro",
-    "theme": "Light",
-    "archetype": "1 (Organic & Earthy)",
-    "vibe": "Refined Breton Bistro. Grounded, elegant, tactile. Avoiding cheap folkloric cliches, prioritizing an upscale Parisian 16th arrondissement feel with subtle coastal Breton roots."
+  "project_name": "Sogno - Luxury Italian Restaurant",
+  "theme": "dark",
+  "archetype": "5 (Jewel & Luxury)",
+  "colors": {
+    "background": "#0a0908",
+    "surface": "#141211",
+    "surface_glass": "rgba(10, 9, 8, 0.7)",
+    "primary_text": "#fdfbf7",
+    "secondary_text": "#a8a29e",
+    "accent_gold": "#c5a059",
+    "accent_hover": "#dfb768",
+    "border": "#272321",
+    "error": "#8c3a3a"
   },
   "typography": {
     "headings": {
-      "family": "Cormorant Garamond, serif",
-      "weights": ["300", "400", "600"],
-      "usage_rules": "Use for all major headings (H1, H2). Tracking should be tight (tracking-tight) for sizes above 32px. Do NOT use Inter or generic sans for headings."
+      "font_family": "Bodoni Moda, serif",
+      "weights": ["400", "500", "600"],
+      "styles": "tracking-tight, cinematic, elegant"
     },
     "body": {
-      "family": "Manrope, sans-serif",
-      "weights": ["300", "400", "500"],
-      "usage_rules": "Clean, highly legible sans-serif for menus, paragraphs, and forms."
+      "font_family": "Manrope, sans-serif",
+      "weights": ["300", "400"],
+      "styles": "clean, modern, highly legible, leading-relaxed"
     },
-    "accent_labels": {
-      "family": "Outfit, sans-serif",
-      "weights": ["500", "600"],
-      "usage_rules": "Use for overlines, small labels, and categories. Must be uppercase with wide spacing (tracking-[0.2em])."
-    },
-    "hierarchy": {
-      "h1": "text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-none tracking-tight",
-      "h2": "text-4xl sm:text-5xl leading-tight tracking-tight",
-      "h3": "text-2xl sm:text-3xl leading-snug",
-      "body": "text-base sm:text-lg leading-relaxed text-slate-700",
-      "overline": "text-xs sm:text-sm uppercase tracking-[0.2em] font-medium"
+    "accents": {
+      "font_family": "Manrope, sans-serif",
+      "styles": "uppercase, tracking-widest, text-xs"
     }
   },
-  "color_palette": {
-    "background": {
-      "primary": "#F9F6F0",
-      "secondary": "#EAE4D9",
-      "dark_section": "#1D2125"
-    },
-    "text": {
-      "primary": "#1A1A1A",
-      "secondary": "#4A5568",
-      "inverse": "#F9F6F0"
-    },
-    "brand_accents": {
-      "cider_amber": "#C27A3E",
-      "ocean_navy": "#1B2A47",
-      "granite": "#2C2F33"
-    },
-    "rules": {
-      "contrast": "Maintain WCAG AA minimum. Never use pure #000000. Tint blacks towards charcoal/granite (#1A1A1A).",
-      "surfaces": "Use solid flat backgrounds with very subtle 1px borders (border-slate-200/50) instead of heavy shadows. Forms and inputs should use crisp sharp edges."
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_padding": "py-24 md:py-32",
+    "grid_strategy": "Mode A (Tetris/Asymmetric). Avoid symmetric columns. Use overlapping images and text blocks, plenty of negative space.",
+    "border_radius": "rounded-none for sharp luxury feel, or max rounded-sm for subtle inputs"
+  },
+  "motion_and_interaction": {
+    "scrolling": "Lenis smooth scrolling (mandatory)",
+    "animations": "Framer Motion. Slow fade-ins, gentle upward transforms (y: 20 -> 0) with duration > 0.8s and easeOut. NO bouncy springs.",
+    "hover_states": "Subtle text color shifts to gold, image scale up (1.05) in overflow-hidden containers."
+  },
+  "ui_components": {
+    "buttons": "Square corners (rounded-none). Primary: bg-[#c5a059] text-black hover:bg-[#dfb768]. Secondary: bg-transparent border border-[#c5a059] text-[#c5a059] hover:bg-[#c5a059]/10.",
+    "navigation": "Fixed header with crystal glassmorphism (backdrop-blur-xl bg-[#0a0908]/70). Logo centered or left. Explicit navigation links, NO hamburger menu on desktop.",
+    "forms": "Use Shadcn Form, Input, Select, Popover, Calendar. Override Vercel look with dark backgrounds (bg-[#141211]), thin border (#272321), square corners, and gold focus rings.",
+    "menu_list": "Elegant editorial layout. Dotted lines connecting dish name to price, or space-between flexbox. Ingredients in smaller, secondary text."
+  },
+  "media": {
+    "image_urls": {
+      "hero_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/d969179f2bdfb1bd3d1353dfaa2e175c00f3539e77a85218d8685660ce3cea71.png",
+        "description": "Main hero background. Use bg-black/40 overlay to ensure text contrast."
+      },
+      "texture_wine": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/cce972e8921a1f809daa3ce57d48b796c34624bff65509ea6455c82d51edfa6f.png",
+        "description": "Dark red wine pouring. For Cave/Drinks or About section."
+      },
+      "dish_vongole": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/910de659658176caf5bf494fa88ae160823196768e397dff88fa20aee84a06f6.png",
+        "description": "Linguine alle vongole. Menu highlight or gallery."
+      },
+      "dish_burrata": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/388eeb59e78547f5d10d82ecb858dc912da90d6a40e47cb03458068b3ccb6173.png",
+        "description": "Burrata di Puglia. Menu highlight or gallery."
+      },
+      "dish_tiramisu": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/5d020419eab8cd2bf94f8157b9964ce7f9aaabed27da2f4629a4b3f6b75b5ace.png",
+        "description": "Tiramisu tradizionale. Menu highlight or gallery."
+      }
     }
   },
-  "spacing_and_layout": {
-    "philosophy": "Generous Spacing Philosophy. Use large padding (py-24, py-32) to create breathing room between sections, evoking luxury and calm.",
-    "container": "Max-width of 7xl (max-w-7xl) with px-6 md:px-12 for standard sections.",
-    "grid_system": "Bento Grid Protocol (Tetris Mode) for the About and Gallery sections. Mix spans (col-span-4, col-span-8) to create asymmetry and visual tension.",
-    "border_radius": "Strictly sharp or extremely subtle. Use `rounded-none` or `rounded-sm` (2px) maximum for all cards, buttons, and inputs to reflect high-end editorial print."
+  "content_strategy": {
+    "tone": "Refined, intimate, Dolce Vita, highly sensory.",
+    "sections": [
+      {
+        "name": "Hero",
+        "description": "Immersive image, massive typography (SOGNO), elegant reservation CTA."
+      },
+      {
+        "name": "La Storia",
+        "description": "About section explaining the Italian heritage and Trocadéro location. Asymmetric imagery."
+      },
+      {
+        "name": "Menu",
+        "description": "Divided into Antipasti, Piatti Principali, Dolci. Real data: Burrata (13€), Vitello Tonnato (18€), Linguine Vongole (28€), Ossobuco (29€)."
+      },
+      {
+        "name": "Reservation",
+        "description": "Premium booking form (Date, Time, Guests, Details). Highly styled Shadcn components."
+      },
+      {
+        "name": "Footer",
+        "description": "Massive SOGNO text, 42 Rue de l'Amiral Hamelin, 75016 Paris. Contact info."
+      }
+    ]
   },
-  "component_rules": {
-    "buttons": {
-      "primary": "Solid ocean_navy (#1B2A47) background, inverse text, rounded-none, px-8 py-4, hover:bg-slate-800 transition-colors duration-300.",
-      "secondary": "Transparent background, border-b border-1 border-slate-900 pb-1 rounded-none hover:text-cider_amber transition-colors."
-    },
-    "forms_and_inputs": {
-      "base": "Use Shadcn components heavily customized. rounded-none, border-slate-300, bg-transparent, focus:ring-1 focus:ring-slate-900 focus:border-slate-900.",
-      "labels": "Manrope text-sm font-medium text-slate-700"
-    },
-    "navigation": {
-      "style": "Glassmorphism header (backdrop-blur-xl bg-[#F9F6F0]/80). Sticky top-0 z-50. Minimalist logo text (Cormorant Garamond). Primary CTA 'Réserver' visible at all times."
-    }
-  },
-  "pages_and_sections": {
-    "hero": {
-      "layout": "Full height (min-h-screen). Immersive background image of bistro interior with overlay bg-black/40. Center-aligned text.",
-      "content": "Overline: 'CRÊPERIE • BISTROT BRETON', H1: 'Le Jean Michel Breizh', Subtitle: 'L\\'âme de la Bretagne au cœur du 16e arrondissement.', CTA: 'Réserver une table'."
-    },
-    "about": {
-      "layout": "Asymmetric split layout. Left side: Text heavily padded. Right side: Overlapping images of ocean granite and galettes. Background: #F9F6F0.",
-      "content": "Story of the bistro, merging Parisian chic with traditional Breton buckwheat and cider. Emphasize the high-quality ingredients."
-    },
-    "menu_highlight": {
-      "layout": "Two-column list layout (Savory Galettes vs Sweet Crêpes). Use the subtle ermine pattern background (bg-cover/opacity-50).",
-      "styling": "Editorial menu style. Item names in Cormorant Garamond text-xl, ingredients in Manrope text-sm text-slate-600. Prices right-aligned."
-    },
-    "gallery": {
-      "layout": "Bento Grid (Tetris Mode). 1-4-8 spans. Images must be object-cover, grayscale on hover or subtle zoom-in on hover."
-    },
-    "reservation_and_contact": {
-      "layout": "Dark Section (#1D2125). Two columns. Left: Practical Info (Hours, Address, Map). Right: Reservation Form.",
-      "form_fields": ["Date (Calendar Picker)", "Time (Select)", "Guests (Select)", "Name (Input)", "Phone (Input)", "Email (Input)", "Special Requests (Textarea)"],
-      "note": "Use Shadcn form, input, select, popover, calendar."
-    },
-    "footer": {
-      "layout": "Massive typography for the brand name (text-[8vw] Cormorant Garamond), bordered links, minimal copyright. background: #1A1A1A, text: #EAE4D9."
-    }
-  },
-  "media_assets": {
-    "hero_background": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/72da41271f25de712af32a3abd569433dbfd34bc69043512e4c811f2e9bf310f.png",
-      "description": "Elegant Parisian bistro interior"
-    },
-    "texture_granite": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/d1e6e97b7ec41730026aa4424dc531e8c051bcef2f2c1ff53a91500b5f22c635.png",
-      "description": "Dark grey granite stone background"
-    },
-    "pattern_ermine": {
-      "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/63105c6d07aa13f83b521db5c35edb6aa02547be819a28d44ff36a9505e73144.png",
-      "description": "Subtle abstract Breton ermine background pattern"
-    },
-    "food_galette_1": {
-      "url": "https://images.unsplash.com/photo-1643410454503-d70d0184b1ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHxmcmVuY2glMjBnYWxldHRlJTIwY3JlcGV8ZW58MHx8fHwxNzc5MTEyOTY2fDA&ixlib=rb-4.1.0&q=85",
-      "description": "French galette close up"
-    },
-    "food_galette_2": {
-      "url": "https://images.unsplash.com/photo-1645676456446-79c5a8aa9451?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxmcmVuY2glMjBnYWxldHRlJTIwY3JlcGV8ZW58MHx8fHwxNzc5MTEyOTY2fDA&ixlib=rb-4.1.0&q=85",
-      "description": "Galette with egg"
-    },
-    "interior_1": {
-      "url": "https://images.unsplash.com/photo-1651440204216-548382747b40?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxlbGVnYW50JTIwYmlzdHJvJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc5MTEyOTY3fDA&ixlib=rb-4.1.0&q=85",
-      "description": "Bistro dining table"
-    },
-    "interior_2": {
-      "url": "https://images.unsplash.com/photo-1583354608715-177553a4035e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwYmlzdHJvJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc5MTEyOTY3fDA&ixlib=rb-4.1.0&q=85",
-      "description": "White round table elegant"
-    },
-    "ocean_rocks_1": {
-      "url": "https://images.unsplash.com/photo-1672401453298-718391001690?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwyfHxvY2VhbiUyMGdyYW5pdGUlMjByb2Nrc3xlbnwwfHx8fDE3NzkxMTI5ODN8MA&ixlib=rb-4.1.0&q=85",
-      "description": "Ocean granite rocks"
-    }
-  },
-  "motion_and_interactions": {
-    "hover_states": "Images should gently scale up (scale-105) over 500ms ease-out on hover. Buttons should invert colors or slide-up background fill.",
-    "scroll_animations": "Use framer-motion for staggered fade-up (y: 30, opacity: 0 -> 1) on scroll for text blocks and gallery items. Keep it subtle and elegant, not aggressive.",
-    "lenis_scroll": "MANDATORY: Implement lenis smooth scrolling for a premium, heavy momentum feel."
-  },
-  "accessibility_and_testing": {
-    "contrast": "Ensure all text overlaid on the hero image or granite textures has sufficient contrast. Use drop-shadow or darker overlays if necessary.",
-    "data_testid": "Apply role-based `data-testid` to all interactive elements. E.g., `data-testid=\"nav-reserve-button\"`, `data-testid=\"reservation-form-submit\"`, `data-testid=\"menu-section\"`."
-  },
+  "testing": "All interactive elements (buttons, links, form inputs) MUST include data-testid attributes.",
   "instructions_to_main_agent": [
-    "Install required fonts from Google Fonts: Cormorant Garamond, Manrope, Outfit.",
-    "Install lenis (@studio-freight/lenis), framer-motion, lucide-react.",
-    "Install Shadcn components: button, input, select, form, calendar, popover, toast.",
-    "Implement the pages using pure React components (HTML+Tailwind) for layouts, heavily using the bento-grid methodology described.",
-    "Override default Shadcn rounding to `rounded-none` or `rounded-sm` across the board.",
-    "Use the exact media URLs provided in the media_assets section. Do not use any placeholder services.",
-    "The site should feel like a premium editorial spread—lean into asymmetry, generous negative space, and large elegant typography."
+    "Install and configure Bodoni Moda and Manrope via Google Fonts in CSS/Tailwind config.",
+    "Use raw HTML and Tailwind (div, section) for complex overlapping marketing layouts; only use Shadcn for the reservation form components.",
+    "Implement Lenis for smooth scroll. Use Framer Motion for text reveals (staggered letters/lines) and fade-ins.",
+    "Never use pure white text, always #fdfbf7. Never use full black, always #0a0908.",
+    "Follow 'E1' spacing: generous p-12 to p-24.",
+    "In the menu, ensure prices and descriptions match the real scraped data.",
+    "Do NOT hide desktop navigation behind a hamburger menu."
   ]
 }
