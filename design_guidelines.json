@@ -1,84 +1,10 @@
 {
-  "theme_and_archetype": {
-    "theme": "LIGHT",
-    "archetype": "Archetype 1: Organic & Earthy (Modified for Mediterranean Portofino Elegance)",
-    "mood": "Sunny, Condé Nast Traveler editorial, luxurious 1960s Dolce Vita, luminous, fresh, airy"
-  },
-  "colors": {
-    "background_primary": "#F9F6F0",
-    "background_secondary": "#FFFFFF",
-    "surface": "#FDFBF7",
-    "accent_terracotta": "#C8553D",
-    "accent_sea_blue": "#5B7B8C",
-    "accent_lemon": "#F2E299",
-    "text_primary": "#2C3E38",
-    "text_secondary": "#5C6B66",
-    "border_subtle": "#E5DFD3"
-  },
-  "typography": {
-    "heading_font": "Bodoni Moda",
-    "body_font": "Manrope",
-    "heading_style": "Elegant, editorial, high-contrast serif. Tight tracking on large text.",
-    "subheading_style": "Uppercase, tracking-[0.2em], text-sm, text-[#5B7B8C] or text-[#C8553D].",
-    "hierarchy_rules": "H1 max text-5xl md:text-7xl. Use fluid scaling."
-  },
-  "layout_and_spacing": {
-    "corner_radius": "rounded-none",
-    "spacing_scale": "Generous (p-12 to p-24) to emulate high-end editorial print margins.",
-    "grids": "Asymmetrical bento for galleries and menus. 1px visible grid borders (border-[#E5DFD3]) between sections to give structure."
-  },
-  "component_rules": {
-    "buttons": "rounded-none, bg-[#C8553D] text-[#FFFFFF] hover:bg-[#A6442F]. Secondary buttons: border border-[#2C3E38] text-[#2C3E38] hover:bg-[#2C3E38] hover:text-[#F9F6F0]",
-    "navbar": "Glassmorphism: backdrop-blur-xl bg-[#F9F6F0]/80, border-b border-[#E5DFD3], text-[#2C3E38]",
-    "cards_and_menus": "Flat backgrounds (bg-[#FFFFFF]), no shadows, 1px border-[#E5DFD3]",
-    "footer": "bg-[#F9F6F0], XXL Logotype in Bodoni Moda (text-[#C8553D] or text-[#2C3E38]), clean structured columns with 1px top border."
-  },
-  "motion_and_interactions": {
-    "scrolling": "Lenis smooth scroll mandatory for premium feel.",
-    "animations": "Framer motion for gentle text reveals (y-axis slide up), parallax on hero and large images.",
-    "hover_states": "Images scale slightly inside overflow-hidden containers. Text colors shift subtly."
-  },
   "media": {
-    "overlay_rules": "Max bg-black/20 on Hero. Do NOT darken images excessively. Keep the sunlit Portofino feel intact. Use gradient-to-t from-black/30 to-transparent only at the bottom if text readability is an issue.",
-    "image_urls": {
-      "hero_terrace": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/4c0414d0b4a5be4a9faeabb483e3724ff1a29523455ca7c17316c334bc836dc0.png",
-        "description": "Portofino terrace at golden hour, blue/white striped umbrellas",
-        "category": "Hero Section Background"
-      },
-      "about_lemons": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/62b296b3937c99c07d03c8f8d5ae556ddadd1217ac3e55c68322fa73621d0cf5.png",
-        "description": "Close-up of lemon trees on terracotta wall",
-        "category": "La Storia / About Section Image"
-      },
-      "wine_sea": {
-        "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/bc554cc7e0b3d75853b8e8f3dc13772e4acee8cf90638a593ba5f967dff13b8a.png",
-        "description": "White wine with blurred Portofino turquoise sea background",
-        "category": "La Cantina / Wine Menu Image"
-      },
-      "menu_pasta": {
-        "url": "https://images.unsplash.com/photo-1682159173068-358e0411abc7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwaXRhbGlhbiUyMHBhc3RhJTIwc2VhZm9vZCUyMGJyaWdodHxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Elegant Italian seafood pasta plate",
-        "category": "Il Menu / Primi or Galleria"
-      },
-      "menu_burrata": {
-        "url": "https://images.unsplash.com/photo-1614887101277-22d7168ab9c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMGJ1cnJhdGElMjBjaGVlc2UlMjBicmlnaHQlMjBwbGF0ZXxlbnwwfHx8fDE3NzkxMjUxMzd8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Fresh burrata on a bright elegant plate",
-        "category": "Il Menu / Antipasti or Galleria"
-      },
-      "menu_tiramisu": {
-        "url": "https://images.unsplash.com/photo-1698688334089-c68105801d02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHx0aXJhbWlzdSUyMGRlc3NlcnQlMjBlbGVnYW50JTIwYnJpZ2h0fGVufDB8fHx8MTc3OTEyNTEzN3ww&ixlib=rb-4.1.0&q=85",
-        "description": "Elegant Tiramisu dessert",
-        "category": "Il Menu / Dolci or Galleria"
-      }
+    "hero_portofino_table": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/de62324c126518fce85614b6fec3c8679da6a7c781b0c4eb87279857fbb1cf8a.png",
+      "description": "Photorealistic aerial view of a luxury restaurant terrace in Portofino, Italy, golden hour light, colorful pastel houses cascading down the cliffside, turquoise Mediterranean sea below, a beautifully set table with Italian dishes \u2014 pasta, seafood, wine glasses \u2014 white linen tablecloth, flowers, elegant candlelight, cinematic photography, luxury lifestyle, bokeh, shot from above at a slight angle, Vogue editorial style",
+      "category": "hero",
+      "format": "landscape"
     }
-  },
-  "instructions_to_main_agent": [
-    "REPLACE ALL DARK THEME UTILITIES with the new light Portofino palette specified in this JSON.",
-    "Do NOT use pure black backgrounds or overly heavy hero overlays. Max bg-black/20 to maintain the sun-drenched feel.",
-    "Ensure headings use Bodoni Moda. Import it if necessary via standard Google Fonts links.",
-    "Ensure 'rounded-none' is strictly applied to buttons, cards, and image wrappers. Keep it sharp and editorial.",
-    "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='hero-cta-button', data-testid='reservation-submit').",
-    "Retain the existing section routes (/sogno) and all key functionalities (Hero, La Storia, Il Menu, Galleria, Prenotazione/Contatto, Footer logotype XXL)."
-  ]
+  }
 }
