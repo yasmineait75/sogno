@@ -39,6 +39,7 @@ export const SOGNO_ANTIPASTI = [
   { name: "Uovo cotto a bassa temperatura", desc: "Œuf parfait au cœur coulant, champignons de saison sautés à la ciboulette, mousse de scamorza fumée — un jeu subtil de textures et saveurs", price: "15" },
   { name: "Prosciutto di Parma", desc: "Jambon de Parme affiné 24 mois, focaccia tiède", price: "16" },
   { name: "Assortimento di salumi italiani", desc: "Prosciutto di Parma affiné 24 mois, Spianata piccante, Mortadella délicatement parfumée — assortiment généreux à partager (ou pas), idéal avec un bon verre de vin", price: "22" },
+  { name: "Gamberi alla 'nduja e stracciatella", desc: "Crevettes délicatement préparées, crème de 'nduja de Sperlinga, stracciatella des Pouilles, basilic frais — équilibre parfait entre intensité, douceur et fraîcheur", price: "22" },
 ];
 
 export const SOGNO_PRIMI = [
