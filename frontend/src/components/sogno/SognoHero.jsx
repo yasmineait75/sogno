@@ -41,10 +41,15 @@ export const SognoHero = () => {
           }}
           data-testid="sogno-hero-title"
         >
-          <span style={{ fontSize: "clamp(4.5rem, 14vw, 13rem)" }}>Sogno</span>
+          <span style={{ fontSize: "clamp(4.5rem, 14vw, 13rem)" }}>SOGNO</span>
           <span
             className="italic"
-            style={{ fontSize: "clamp(1.5rem, 3.5vw, 3rem)", color: "#E8B931", letterSpacing: "0.02em" }}
+            style={{
+              fontSize: "clamp(1.5rem, 3.5vw, 3rem)",
+              color: "#E8B931",
+              letterSpacing: "0.04em",
+              textShadow: "0 2px 14px rgba(0,0,0,0.55)",
+            }}
           >
             Paris.
           </span>
@@ -62,7 +67,7 @@ export const SognoHero = () => {
             textShadow: "0 1px 12px rgba(0,0,0,0.5)",
           }}
         >
-          L'Italie au cœur du 16<sup>e</sup>.
+          Par magie culinaire, voyagez du 16<sup>e</sup> à Portofino.
         </motion.p>
 
         <motion.p

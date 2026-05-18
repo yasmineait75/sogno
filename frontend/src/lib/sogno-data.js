@@ -22,7 +22,7 @@ export const SOGNO_HOURS = [
 ];
 
 export const SOGNO_MEDIA = {
-  hero: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/910de659658176caf5bf494fa88ae160823196768e397dff88fa20aee84a06f6.png",
+  hero: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/de62324c126518fce85614b6fec3c8679da6a7c781b0c4eb87279857fbb1cf8a.png",
   terrace: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/4c0414d0b4a5be4a9faeabb483e3724ff1a29523455ca7c17316c334bc836dc0.png",
   lemons: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/62b296b3937c99c07d03c8f8d5ae556ddadd1217ac3e55c68322fa73621d0cf5.png",
   wine: "https://static.prod-images.emergentagent.com/jobs/95198ab9-cbd3-4cee-badb-5ac4f05ec298/images/bc554cc7e0b3d75853b8e8f3dc13772e4acee8cf90638a593ba5f967dff13b8a.png",
