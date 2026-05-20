@@ -1,0 +1,12 @@
+.git
+.emergent
+node_modules
+**/__pycache__
+**/*.pyc
+backend/tests
+frontend/node_modules
+frontend/build
+test_reports
+memory
+*.log
+.DS_Store
