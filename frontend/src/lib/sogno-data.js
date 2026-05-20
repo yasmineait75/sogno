@@ -32,7 +32,7 @@ export const SOGNO_MEDIA = {
     crevette: "/CREVETTE.jpeg",
     lasagne: "/LASAGNE.jpeg",
     palourdes: "/PALOURDES.jpeg",
-    pistache: "/PISTACHE..jpeg",
+    pistache: "/PISTACHE.jpeg",
     poulet: "/POULET.jpeg",
     tiramisu: "/TIRAMISU.jpeg",
     uovo: "/UOVO.jpeg",
