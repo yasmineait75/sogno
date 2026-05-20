@@ -432,7 +432,7 @@ const SuccessCard = ({ data, onReset }) => {
         le <strong className="text-[#2C3E38]">{data?.date}</strong> à{" "}
         <strong className="text-[#2C3E38]">{timeFr}</strong>.
         <br />
-        Vous recevrez une confirmation par email d'ici peu.
+        Votre demande a bien été enregistrée. Notre équipe vous confirmera rapidement votre réservation.
       </p>
       <div className="w-12 h-px bg-[#1F4E5F]/30 my-7" />
       <button
