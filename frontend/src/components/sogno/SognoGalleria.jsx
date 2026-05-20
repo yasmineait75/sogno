@@ -4,11 +4,12 @@ import { SOGNO_MEDIA } from "../../lib/sogno-data";
 
 export const SognoGalleria = () => {
   const items = [
-    { src: SOGNO_MEDIA.burrata, alt: "Burrata di Puglia", cls: "col-span-12 md:col-span-7 row-span-2 h-[460px]", caption: "Burrata di Puglia" },
-    { src: SOGNO_MEDIA.vongole, alt: "Linguine alle vongole", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Linguine alle Vongole" },
-    { src: SOGNO_MEDIA.tiramisu, alt: "Tiramisù", cls: "col-span-6 md:col-span-5 h-[220px]", caption: "Tiramisù tradizionale" },
-    { src: SOGNO_MEDIA.vitello, alt: "Vitello tonnato", cls: "col-span-6 md:col-span-4 h-[320px]", caption: "Vitello tonnato" },
-    { src: SOGNO_MEDIA.suprema, alt: "Suprema di pollo", cls: "col-span-12 md:col-span-8 h-[320px]", caption: "Suprema di pollo al tartufo" },
+    { src: SOGNO_MEDIA.dishes.palourdes, alt: "Linguine alle vongole", cls: "col-span-12 md:col-span-7 row-span-2 h-[460px]", caption: "Linguine alle Vongole" },
+    { src: SOGNO_MEDIA.dishes.vitello, alt: "Vitello tonnato", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Vitello tonnato" },
+    { src: SOGNO_MEDIA.dishes.uovo, alt: "Uovo alla Valtellina", cls: "col-span-12 md:col-span-5 h-[220px]", caption: "Uovo alla Valtellina" },
+    { src: SOGNO_MEDIA.dishes.crevette, alt: "Gamberi alla 'nduja", cls: "col-span-6 md:col-span-4 h-[300px]", caption: "Gamberi alla 'nduja" },
+    { src: SOGNO_MEDIA.dishes.lasagne, alt: "Lasagna al ragù", cls: "col-span-6 md:col-span-4 h-[300px]", caption: "Lasagna al ragù" },
+    { src: SOGNO_MEDIA.dishes.poulet, alt: "Suprema di pollo al tartufo", cls: "col-span-12 md:col-span-4 h-[300px]", caption: "Suprema al tartufo" },
   ];
 
   return (

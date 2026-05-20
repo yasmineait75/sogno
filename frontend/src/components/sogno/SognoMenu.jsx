@@ -7,6 +7,7 @@ import {
   SOGNO_SECONDI,
   SOGNO_DOLCI,
   SOGNO_CAVE,
+  SOGNO_MEDIA,
 } from "../../lib/sogno-data";
 
 const CATEGORIES = [
@@ -105,6 +106,36 @@ export const SognoMenu = () => {
             sourcés directement chez nos producteurs italiens.
           </p>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20" data-testid="sogno-menu-accents">
+          {[
+            { src: SOGNO_MEDIA.dishes.calamars, caption: "Frittura di calamari" },
+            { src: SOGNO_MEDIA.dishes.tiramisu, caption: "Tiramisù tradizionale" },
+            { src: SOGNO_MEDIA.dishes.pistache, caption: "Cannolo siciliano · pistache" },
+          ].map((it, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: i * 0.1 }}
+              viewport={{ once: true, margin: "-40px" }}
+              className="relative overflow-hidden h-[260px] md:h-[300px] group"
+            >
+              <img
+                src={it.src}
+                alt={it.caption}
+                className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-90" />
+              <p
+                className="absolute bottom-5 left-5 text-white italic"
+                style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.15rem", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
+              >
+                {it.caption}
+              </p>
+            </motion.div>
+          ))}
+        </div>
 
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 mb-16 border-b border-[#E5DFD3] pb-6">
           {CATEGORIES.map((cat) => (
