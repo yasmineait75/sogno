@@ -26,14 +26,20 @@ export const SognoReservation = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", notes: "" });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(null);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const [contact, setContact] = useState({ name: "", email: "", subject: "", message: "" });
   const [contactSubmitting, setContactSubmitting] = useState(false);
 
   const handleReserve = async (e) => {
     e.preventDefault();
+    setErrorMsg("");
     if (!date || !time) {
-      toast.error("Merci de sélectionner une date et un horaire.");
+      setErrorMsg("Merci de sélectionner une date et un horaire.");
+      return;
+    }
+    if (!form.name.trim() || !form.email.trim() || !form.phone.trim()) {
+      setErrorMsg("Merci de renseigner votre nom, email et téléphone.");
       return;
     }
     setSubmitting(true);
@@ -54,7 +60,12 @@ export const SognoReservation = () => {
       setGuests("2");
     } catch (err) {
       console.error(err);
-      toast.error("Une erreur est survenue.");
+      const detail = err?.response?.data?.detail;
+      const msg = typeof detail === "string"
+        ? detail
+        : "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
+      setErrorMsg(msg);
+      toast.error("Réservation impossible.");
     } finally {
       setSubmitting(false);
     }
@@ -300,6 +311,18 @@ export const SognoReservation = () => {
                     {submitting ? <Loader2 className="animate-spin" size={16} /> : null}
                     {submitting ? "Envoi…" : "Confirmer la réservation"}
                   </button>
+
+                  {errorMsg && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      data-testid="sogno-reservation-error"
+                      className="text-[#A33B2A] text-xs mt-2 border-l-2 border-[#A33B2A]/60 pl-3 py-1"
+                      style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 400 }}
+                    >
+                      {errorMsg}
+                    </motion.p>
+                  )}
                 </form>
               )}
             </div>
@@ -377,32 +400,50 @@ const InfoBlock = ({ icon, title, children }) => (
   </div>
 );
 
-const SuccessCard = ({ data, onReset }) => (
-  <div
-    data-testid="sogno-reservation-success"
-    className="border border-[#1F4E5F]/40 bg-[#1F4E5F]/5 p-8"
-  >
-    <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-4">Réservation reçue</p>
-    <h4
-      className="mb-4 text-[#2C3E38]"
-      style={{ fontFamily: "'Bodoni Moda', serif", fontSize: "1.8rem", fontWeight: 400 }}
+const SuccessCard = ({ data, onReset }) => {
+  const timeFr = data?.time ? data.time.replace(":", "h") : "";
+  return (
+    <motion.div
+      data-testid="sogno-reservation-success"
+      initial={{ opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="bg-[#F9F6F0] border border-[#1F4E5F]/30 p-10 md:p-12 relative overflow-hidden"
     >
-      Merci {data?.name?.split(" ")[0]} — nous vous attendons !
-    </h4>
-    <p className="text-[#5C6B66] text-sm leading-relaxed" style={{ fontWeight: 300 }}>
-      Votre demande pour <strong className="text-[#2C3E38]">{data?.guests} personne(s)</strong> le{" "}
-      <strong className="text-[#2C3E38]">{data?.date}</strong> à{" "}
-      <strong className="text-[#2C3E38]">{data?.time?.replace(":", "h")}</strong> a bien été enregistrée.
-      Notre maître d'hôtel vous confirme la réservation dans la journée.
-    </p>
-    <button
-      onClick={onReset}
-      data-testid="sogno-reservation-reset"
-      className="mt-6 text-[11px] uppercase tracking-[0.28em] border-b border-[#1F4E5F] pb-1 text-[#1F4E5F] hover:text-[#2C3E38] hover:border-[#2C3E38] transition-colors"
-    >
-      Nouvelle réservation →
-    </button>
-  </div>
-);
+      <p className="text-[11px] uppercase tracking-[0.32em] text-[#1F4E5F] mb-6">— Réservation reçue</p>
+      <h4
+        className="mb-4 text-[#2C3E38] leading-tight"
+        style={{
+          fontFamily: "'Bodoni Moda', serif",
+          fontSize: "clamp(2rem, 4vw, 2.8rem)",
+          fontWeight: 400,
+        }}
+      >
+        <em className="italic text-[#1F4E5F]">Grazie</em>
+        {data?.name ? `, ${data.name.split(" ")[0]}` : ""} —
+        <br />
+        Votre table est réservée.
+      </h4>
+      <p
+        className="text-[#5C6B66] text-base leading-relaxed mt-4"
+        style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 300 }}
+      >
+        Demande pour <strong className="text-[#2C3E38]">{data?.guests} couvert{data?.guests > 1 ? "s" : ""}</strong>{" "}
+        le <strong className="text-[#2C3E38]">{data?.date}</strong> à{" "}
+        <strong className="text-[#2C3E38]">{timeFr}</strong>.
+        <br />
+        Vous recevrez une confirmation par email d'ici peu.
+      </p>
+      <div className="w-12 h-px bg-[#1F4E5F]/30 my-7" />
+      <button
+        onClick={onReset}
+        data-testid="sogno-reservation-reset"
+        className="text-[11px] uppercase tracking-[0.28em] border-b border-[#1F4E5F] pb-1 text-[#1F4E5F] hover:text-[#2C3E38] hover:border-[#2C3E38] transition-colors"
+      >
+        Nouvelle réservation →
+      </button>
+    </motion.div>
+  );
+};
 
 export default SognoReservation;

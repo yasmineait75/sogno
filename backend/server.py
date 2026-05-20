@@ -19,6 +19,18 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
+# Optional Resend email integration
+RESEND_API_KEY = os.environ.get('RESEND_API_KEY', '').strip()
+RESEND_FROM = os.environ.get('RESEND_FROM', 'Sogno Paris <noreply@sogno-paris.fr>')
+_resend = None
+if RESEND_API_KEY:
+    try:
+        import resend as _resend_mod
+        _resend_mod.api_key = RESEND_API_KEY
+        _resend = _resend_mod
+    except Exception as _e:  # pragma: no cover - defensive
+        logging.getLogger(__name__).warning("Resend import failed: %s", _e)
+
 # Create the main app without a prefix
 app = FastAPI(title="Sogno — Ristorante Italiano API")
 
@@ -86,7 +98,54 @@ async def create_reservation(payload: ReservationCreate):
     doc = obj.model_dump()
     doc['created_at'] = doc['created_at'].isoformat()
     await db.reservations.insert_one(doc)
+    _send_reservation_email(obj)
     return obj
+
+
+def _send_reservation_email(res: 'Reservation') -> None:
+    """Fire-and-forget confirmation email. Never raises."""
+    if not _resend:
+        logging.getLogger(__name__).info(
+            "Reservation %s saved — email skipped (RESEND_API_KEY not set)", res.id
+        )
+        return
+    try:
+        time_fr = res.time.replace(':', 'h') if res.time else ''
+        html = (
+            f"<div style=\"font-family:Georgia,'Bodoni Moda',serif;color:#2C3E38;"
+            f"max-width:560px;margin:0 auto;padding:40px 32px;background:#F9F6F0;"
+            f"border:1px solid #E5DFD3;\">"
+            f"<p style=\"font-family:Arial,sans-serif;font-size:11px;letter-spacing:0.28em;"
+            f"text-transform:uppercase;color:#1F4E5F;margin:0 0 24px;\">— Sogno · Paris</p>"
+            f"<h1 style=\"font-size:32px;font-weight:400;font-style:italic;margin:0 0 20px;\">"
+            f"Grazie {res.name.split(' ')[0]},</h1>"
+            f"<p style=\"font-family:Arial,sans-serif;font-size:14px;line-height:1.7;color:#5C6B66;\">"
+            f"Votre table est réservée. Voici les détails de votre venue :</p>"
+            f"<div style=\"font-family:Arial,sans-serif;font-size:14px;line-height:1.9;"
+            f"color:#2C3E38;padding:20px 0;border-top:1px solid #E5DFD3;"
+            f"border-bottom:1px solid #E5DFD3;margin:24px 0;\">"
+            f"<div><strong>Date</strong> · {res.date}</div>"
+            f"<div><strong>Horaire</strong> · {time_fr}</div>"
+            f"<div><strong>Couverts</strong> · {res.guests}</div>"
+            f"</div>"
+            f"<p style=\"font-family:Arial,sans-serif;font-size:13px;line-height:1.7;color:#5C6B66;\">"
+            f"Notre maître d'hôtel confirme votre réservation dans la journée.<br>"
+            f"À très vite — 42 Rue de l'Amiral Hamelin, 75016 Paris.</p>"
+            f"<p style=\"font-family:Arial,sans-serif;font-size:10px;letter-spacing:0.2em;"
+            f"text-transform:uppercase;color:#5C6B66;margin-top:32px;\">Sogno · Ristorante Italiano</p>"
+            f"</div>"
+        )
+        _resend.Emails.send({
+            "from": RESEND_FROM,
+            "to": [res.email],
+            "subject": f"Sogno · Votre table le {res.date} à {res.time}",
+            "html": html,
+        })
+        logging.getLogger(__name__).info("Confirmation email sent to %s", res.email)
+    except Exception as e:
+        logging.getLogger(__name__).warning(
+            "Resend send failed for reservation %s: %s", res.id, e
+        )
 
 
 @api_router.get("/reservations", response_model=List[Reservation])
