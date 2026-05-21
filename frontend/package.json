@@ -3,9 +3,7 @@
       "version": "0.1.0",
       "private": true,
       "dependencies": {
-              "ajv": "6.12.6",
-              "ajv-keywords": "3.5.2",
-              "@hookform/resolvers": "^5.0.1",
+                            "@hookform/resolvers": "^5.0.1",
               "@radix-ui/react-accordion": "^1.2.8",
               "@radix-ui/react-alert-dialog": "^1.1.11",
               "@radix-ui/react-aspect-ratio": "^1.1.4",
@@ -77,6 +75,7 @@
               ]
       },
       "devDependencies": {
+              "ajv": "^8.12.0",
               "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
               "@craco/craco": "^7.1.0",
               "@emergentbase/visual-edits": "https://assets.emergent.sh/npm/emergentbase-visual-edits-1.0.8.tgz",
@@ -90,10 +89,5 @@
               "globals": "^15.15.0",
               "postcss": "^8.4.49",
               "tailwindcss": "^3.4.17"
-      },
-      "overrides": {
-              "ajv": "6.12.6",
-              "ajv-keywords": "3.5.2",
-              "ajv-formats": "2.1.1"
       }
 }
