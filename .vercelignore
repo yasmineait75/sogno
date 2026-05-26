@@ -3,9 +3,6 @@
 node_modules
 **/__pycache__
 **/*.pyc
-backend/
-backend/tests
-api/
 frontend/node_modules
 frontend/build
 test_reports
